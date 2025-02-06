@@ -1,7 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
-from financial_agent import analyze_stocks_in_budget, get_stock_recommendations_by_budget
+from financial_agent import analyze_stocks_in_budget, get_stock_recommendations_by_budget, inr_to_usd
 from stock_analysis import get_top_stock_recommendations
+from stock_database import StockDatabase
 import uvicorn
 
 app = FastAPI(
@@ -23,19 +24,42 @@ class TopRecommendationsResponse(BaseModel):
     recommendations: str
     stocks: list
 
+stock_db = StockDatabase()
+
 @app.post("/analyze-stocks", response_model=BudgetResponse)
 async def analyze_stocks(request: BudgetRequest):
     try:
-        # Get basic analysis
-        basic_analysis = analyze_stocks_in_budget(request.budget_inr)
+        # Convert budget to USD first
+        budget_usd = inr_to_usd(request.budget_inr)
         
-        # Get detailed recommendations
-        detailed_recommendations = get_stock_recommendations_by_budget(request.budget_inr)
+        # Quick validation
+        if budget_usd < 1:
+            return {
+                "budget_inr": request.budget_inr,
+                "budget_usd": budget_usd,
+                "stocks": [],
+                "recommendations": f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})"
+            }
         
-        # Combine results
+        # Get cached stocks within budget
+        stocks_in_budget = stock_db.get_stocks_in_budget(budget_usd)
+        
+        # Format results
+        analysis_result = {
+            "budget_inr": request.budget_inr,
+            "budget_usd": budget_usd,
+            "stocks": stocks_in_budget
+        }
+        
+        # Get detailed recommendations only if we have stocks
+        if stocks_in_budget:
+            recommendations = get_top_stock_recommendations(stocks_in_budget)
+        else:
+            recommendations = f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})"
+        
         return {
-            **basic_analysis,
-            "recommendations": detailed_recommendations
+            **analysis_result,
+            "recommendations": recommendations
         }
         
     except Exception as e:
@@ -43,16 +67,31 @@ async def analyze_stocks(request: BudgetRequest):
 
 @app.post("/top-recommendations", response_model=TopRecommendationsResponse)
 async def get_top_recommendations(request: BudgetRequest):
-    try:
-        # Get basic analysis first to get the list of stocks within budget
-        analysis = analyze_stocks_in_budget(request.budget_inr)
+    try:       # Convert budget to USD first
+        budget_usd = inr_to_usd(request.budget_inr)
+        
+        # Quick validation
+        if budget_usd < 1:
+            return {
+                "recommendations": f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})",
+                "stocks": []
+            }
+        
+        # Get cached stocks within budget
+        stocks_in_budget = stock_db.get_stocks_in_budget(budget_usd)
+        
+        if not stocks_in_budget:
+            return {
+                "recommendations": f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})",
+                "stocks": []
+            }
         
         # Get top 5 recommendations
-        recommendations = get_top_stock_recommendations(analysis['stocks'], top_n=5)
+        recommendations = get_top_stock_recommendations(stocks_in_budget, top_n=5)
         
         return {
             "recommendations": recommendations,
-            "stocks": analysis['stocks'][:5]  # Include full stock data for top 5
+            "stocks": stocks_in_budget[:5]  # Include full stock data for top 5
         }
         
     except Exception as e:

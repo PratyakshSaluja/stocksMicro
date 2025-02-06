@@ -39,30 +39,47 @@ def inr_to_usd(amount_inr: float) -> float:
         return round(amount_inr / 83, 2)  # Using approximate exchange rate
 
 def get_nifty_stocks():
-    """Get list of NIFTY stocks"""
+    """Get list of Indian stocks including NIFTY 100 and other major ones"""
     return [
+        # Original NIFTY 50 stocks
         'RELIANCE.NS', 'TCS.NS', 'HDFCBANK.NS', 'INFY.NS', 'ICICIBANK.NS',
         'HINDUNILVR.NS', 'ITC.NS', 'SBIN.NS', 'BHARTIARTL.NS', 'KOTAKBANK.NS',
         'LT.NS', 'AXISBANK.NS', 'ASIANPAINT.NS', 'MARUTI.NS', 'WIPRO.NS',
         'BAJFINANCE.NS', 'HCLTECH.NS', 'SUNPHARMA.NS', 'TATAMOTORS.NS', 'ULTRACEMCO.NS',
         'TITAN.NS', 'ADANIENT.NS', 'BAJAJFINSV.NS', 'NTPC.NS', 'POWERGRID.NS',
         'TATASTEEL.NS', 'M&M.NS', 'ONGC.NS', 'GRASIM.NS', 'HINDALCO.NS',
-        'JSWSTEEL.NS', 'TECHM.NS', 'ADANIPORTS.NS', 'DRREDDY.NS', 'COALINDIA.NS'
+        'JSWSTEEL.NS', 'TECHM.NS', 'ADANIPORTS.NS', 'DRREDDY.NS', 'COALINDIA.NS',
+        # Additional Indian stocks
+        'ZOMATO.NS', 'PAYTM.NS', 'NYKAA.NS', 'POLICYBZR.NS', 'DMART.NS',
+        'VEDL.NS', 'DABUR.NS', 'DIVISLAB.NS', 'GODREJCP.NS', 'HAVELLS.NS',
+        'INDIGO.NS', 'NAUKRI.NS', 'PNB.NS', 'TATAPOWER.NS', 'BANDHANBNK.NS',
+        'BIOCON.NS', 'CONCOR.NS', 'GLAND.NS', 'LUPIN.NS', 'MARICO.NS', 'MPHASIS.NS', 'PAGEIND.NS', 'PETRONET.NS', 'SAIL.NS',
+        'TORNTPHARM.NS', 'UPL.NS', 'YESBANK.NS', 'ZEEL.NS', 'APOLLOHOSP.NS',
+        'BERGEPAINT.NS', 'BOSCHLTD.NS', 'COLPAL.NS', 'DLF.NS',
+        'EICHERMOT.NS', 'GAIL.NS', 'HEROMOTOCO.NS', 'HINDZINC.NS'
     ]
 
 def get_sp500_stocks():
-    """Get list of popular S&P 500 stocks"""
+    """Get list of popular S&P 500 and NASDAQ stocks"""
     return [
-        'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 
-        'META', 'BRK-B', 'JPM', 'V', 'PG',
-        'TSLA', 'UNH', 'MA', 'HD', 'BAC',
-        'XOM', 'JNJ', 'CVX', 'WMT', 'LLY',
-        'AVGO', 'KO', 'PEP', 'ABBV', 'MRK',
-        'COST', 'AMD', 'DIS', 'CSCO', 'ADBE',
-        'NFLX', 'CRM', 'INTC', 'VZ', 'CMCSA',
-        'PM', 'ORCL', 'NKE', 'TMO', 'MS',
-        'IBM', 'GS', 'QCOM', 'BA', 'CAT',
-        'GE', 'MCD', 'MMM', 'HON', 'PYPL'
+        # Original tech giants and blue chips
+        'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 'META', 'BRK-B', 'JPM', 'V', 'PG',
+        'TSLA', 'UNH', 'MA', 'HD', 'BAC', 'XOM', 'JNJ', 'CVX', 'WMT', 'LLY',
+        'AVGO', 'KO', 'PEP', 'ABBV', 'MRK', 'COST', 'AMD', 'DIS', 'CSCO', 'ADBE',
+        'NFLX', 'CRM', 'INTC', 'VZ', 'CMCSA', 'PM', 'ORCL', 'NKE', 'TMO', 'MS',
+        'IBM', 'GS', 'QCOM', 'BA', 'CAT', 'GE', 'MCD', 'MMM', 'HON', 'PYPL',
+        # Additional US stocks
+        'ABNB', 'ADSK', 'AIG', 'AMC', 'AMT', 'AMAT', 'AXP', 'BABA', 'BBY', 'BLK',
+        'BMY', 'C', 'CF', 'CHTR', 'CI', 'CL', 'CLX', 'COIN', 'COP', 'CRWD',
+        'CVS', 'DAL', 'DASH', 'DDOG', 'DE', 'DELL', 'DOCU', 'DOW', 'EA', 'EBAY',
+        'ED', 'EL', 'F', 'FSLY', 'FTNT', 'GM', 'GOOG', 'HAL', 'HLT',
+        'HPQ', 'HSY', 'INTC', 'K', 'KHC', 'KR', 'LMT', 'LOW', 'LUV', 'MAR',
+        'MET', 'MGM', 'MO', 'MRK', 'MSCI', 'MU', 'NCLH', 'NET', 'NIO', 'NOW',
+        'NSC', 'NTRS', 'NVAX', 'NVR', 'NWS', 'OKTA', 'OXY', 'PANW', 'PENN', 'PFE',
+        'PHM', 'PLTR', 'PSX', 'PTON', 'RCL', 'RICK', 'ROKU', 'RBLX', 'SBUX', 'SHOP',
+        'SQ', 'SPOT', 'SPY', 'SWK', 'T', 'TAP', 'TGT', 'TMUS', 'TWLO',
+        'UAL', 'UBER', 'UPS', 'USB', 'WBA', 'WDC', 'WFC', 'WM', 'WMT',
+        'WU', 'XLE', 'XLF', 'XOM', 'ZG', 'ZM', 'ZS'
     ]
 
 def fetch_stock_data(symbol: str, budget_usd: float) -> dict:

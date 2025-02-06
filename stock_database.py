@@ -11,9 +11,17 @@ from decimal import Decimal
 logger = logging.getLogger(__name__)
 
 class StockDatabase:
-    def __init__(self, cache_file: str = "stock_cache.json"):
+    def __init__(self, cache_file: str = None):
+        # Set default cache file path to be inside the project folder
+        if cache_file is None:
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            cache_file = os.path.join(current_dir, "stock_cache.json")
+        
         self.cache_file = cache_file
-        self.cache_duration = timedelta(hours=24)  # Cache data for 24 hours
+        # Create data directory if it doesn't exist
+        os.makedirs(os.path.dirname(self.cache_file), exist_ok=True)
+        
+        self.cache_duration = timedelta(hours=24)
         self.yfinance_tools = YFinanceTools(
             stock_price=True,
             analyst_recommendations=True,
@@ -92,11 +100,9 @@ class StockDatabase:
                 # Get price and currency
                 price, currency = self._get_stock_price(symbol)
                 
-                # Convert price to USD if needed
+                # Convert price to USD if in INR
                 if currency == 'INR':
-                    price_usd = price * self.inr_to_usd_rate
-                else:
-                    price_usd = price
+                    price = price * self.inr_to_usd_rate
 
                 # Get stock info
                 stock = yf.Ticker(symbol)
@@ -110,19 +116,17 @@ class StockDatabase:
                 # Format market cap in billions
                 market_cap_billions = market_cap / 1_000_000_000 if market_cap else 0
                 
-                logger.info(f"Fetched {symbol}: {currency} {price} -> USD {price_usd:.2f}")
+                logger.info(f"Fetched {symbol}: ${price:.2f} USD")
                 
                 self.cache[symbol] = {
                     'symbol': symbol,
-                    'price': price_usd,
-                    'original_price': price,
-                    'original_currency': currency,
+                    'price': price,
                     'name': info.get('longName', symbol),
                     'recommendation': info.get('recommendationKey', 'N/A'),
                     'forward_pe': info.get('forwardPE', 'N/A'),
                     'dividend_yield': info.get('dividendYield', 0),
                     'market_cap': round(market_cap_billions, 2),  # Store in billions USD
-                    'currency': currency,
+                    'currency': 'USD',  # Always store as USD
                     'last_updated': datetime.now().isoformat(),
                     'volume': info.get('volume', 0),
                     'avg_volume': info.get('averageVolume', 0),
@@ -161,24 +165,6 @@ class StockDatabase:
         if datetime.now() - self.last_updated > self.cache_duration:
             all_symbols = list(self.cache.keys())
             self.update_stock_data(all_symbols)
-
-    def get_stock_price_in_currency(self, symbol: str, target_currency: str = 'USD') -> tuple:
-        """Get stock price in specified currency"""
-        stock_data = self.get_stock_data(symbol)
-        if not stock_data:
-            return 0, 'USD'
-            
-        price = stock_data['original_price']
-        currency = stock_data['original_currency']
-        
-        if target_currency == currency:
-            return price, currency
-        elif target_currency == 'USD' and currency == 'INR':
-            return price * self.inr_to_usd_rate, 'USD'
-        elif target_currency == 'INR' and currency == 'USD':
-            return price / self.inr_to_usd_rate, 'INR'
-        
-        return price, currency
 
     def check_price_only(self, symbol: str) -> float:
         """Quick check of stock price without fetching full data"""
