@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware  # Add this import
 from pydantic import BaseModel, Field
 from financial_agent import analyze_stocks_in_budget, get_stock_recommendations_by_budget, inr_to_usd
 from stock_analysis import get_top_stock_recommendations
@@ -9,6 +10,15 @@ app = FastAPI(
     title="Stock Analysis API",
     description="API for analyzing stocks within a given budget",
     version="1.0.0"
+)
+
+# Add CORS middleware configuration
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
 )
 
 class BudgetRequest(BaseModel):
