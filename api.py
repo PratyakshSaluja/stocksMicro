@@ -57,6 +57,10 @@ async def get_top_recommendations(request: BudgetRequest):
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+@app.get("/")
+async def read_root():
+    return {"message": "Welcome to the Stock Analysis API!"}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
