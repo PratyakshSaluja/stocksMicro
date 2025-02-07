@@ -6,7 +6,7 @@ __all__ = ['fetch_scheme_codes', 'fetch_latest_data', 'main']
 
 BASE_URL = "https://api.mfapi.in/mf"
 LATEST_URL = "https://api.mfapi.in/mf/{}/latest"
-MAX_THREADS = 10
+MAX_THREADS = 40
 LIMIT = 200  # Limit the number of scheme codes processed
 
 def fetch_scheme_codes():
