@@ -41,10 +41,11 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "http://localhost:8000",
-        "https://spendly.vercel.app"
+        "https://spendly.vercel.app",
+        "https://spendly-seven.vercel.app"  # Add your Vercel deployment URL
     ],
     allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS", "HEAD"],
+    allow_methods=["*"],  # Allow all methods
     allow_headers=["*"],
     expose_headers=["*"],
     max_age=3600,  # Cache preflight requests for 1 hour
@@ -104,6 +105,10 @@ async def analyze_stocks(request: BudgetRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.options("/analyze-stocks")
+async def analyze_stocks_options():
+    return {}
+
 @app.post("/top-recommendations", response_model=TopRecommendationsResponse)
 async def get_top_recommendations(request: BudgetRequest):
     try:       # Convert budget to USD first
@@ -135,6 +140,10 @@ async def get_top_recommendations(request: BudgetRequest):
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.options("/top-recommendations")
+async def top_recommendations_options():
+    return {}
 
 @app.on_event("startup")
 async def startup_event():
