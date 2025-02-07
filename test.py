@@ -10,8 +10,13 @@ MAX_THREADS = 10
 LIMIT = 200  # Limit the number of scheme codes processed
 
 def fetch_scheme_codes():
+    headers = {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+    }
     print(f"Fetching scheme codes from {BASE_URL}")
-    response = requests.get(BASE_URL)
+    response = requests.get(BASE_URL, headers=headers)
     if response.status_code == 200:
         schemes = response.json()
         return [scheme["schemeCode"] for scheme in schemes][-LIMIT:]  # Take the last 200 scheme codes
@@ -20,9 +25,14 @@ def fetch_scheme_codes():
         return []
 
 def fetch_latest_data(scheme_code):
+    headers = {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+    }
     url = LATEST_URL.format(scheme_code)
     print(f"Fetching latest data from {url}")
-    response = requests.get(url)
+    response = requests.get(url, headers=headers)
     if response.status_code == 200:
         data = response.json()
         filtered_data = {

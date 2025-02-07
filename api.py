@@ -35,13 +35,19 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Add CORS middleware configuration
+# Configure CORS with more specific settings
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:8000",
+        "https://spendly.vercel.app",
+        "*"  # Remove this in production and specify exact domains
+    ],
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["*"],
+    max_age=3600,  # Cache preflight requests for 1 hour
 )
 
 class BudgetRequest(BaseModel):
@@ -142,10 +148,15 @@ async def startup_event():
 @app.get("/mutual-funds")
 async def get_mutual_funds():
     try:
-        with open("filtered_schemes_2025.json", "r") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        raise HTTPException(status_code=404, detail="Mutual fund data not found")
+        # Fetch fresh mutual fund data instead of reading from file
+        results = fetch_mutual_funds()
+        if not results:
+            # If no fresh data, try reading from file as fallback
+            with open("filtered_schemes_2025.json", "r") as f:
+                results = json.load(f)
+        return results
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/mutual-fund/{scheme_code}")
 async def get_mutual_fund(scheme_code: str):
