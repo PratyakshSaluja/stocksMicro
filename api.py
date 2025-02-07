@@ -5,6 +5,29 @@ from financial_agent import analyze_stocks_in_budget, get_stock_recommendations_
 from stock_analysis import get_top_stock_recommendations
 from stock_database import StockDatabase
 import uvicorn
+import requests
+from typing import List, Optional
+import json
+import sys
+import os
+from pathlib import Path
+
+# Ensure the current directory is in the Python path
+current_dir = Path(__file__).parent
+if str(current_dir) not in sys.path:
+    sys.path.append(str(current_dir))
+
+# Import with better error handling
+try:
+    from .test import fetch_latest_data, main as fetch_mutual_funds
+except ImportError:
+    try:
+        from test import fetch_latest_data, main as fetch_mutual_funds
+    except ImportError as e:
+        print(f"Error importing from test.py: {e}")
+        print(f"Current directory: {current_dir}")
+        print(f"Python path: {sys.path}")
+        raise
 
 app = FastAPI(
     title="Stock Analysis API",
@@ -106,7 +129,35 @@ async def get_top_recommendations(request: BudgetRequest):
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
+
+@app.on_event("startup")
+async def startup_event():
+    try:
+        # Run the mutual fund data fetcher on startup
+        results = fetch_mutual_funds()
+        print("Mutual fund data fetched and saved successfully")
+    except Exception as e:
+        print(f"Error during mutual fund data fetch: {e}")
+
+@app.get("/mutual-funds")
+async def get_mutual_funds():
+    try:
+        with open("filtered_schemes_2025.json", "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Mutual fund data not found")
+
+@app.get("/mutual-fund/{scheme_code}")
+async def get_mutual_fund(scheme_code: str):
+    try:
+        # Get fresh data for the specific scheme
+        data = fetch_latest_data(scheme_code)
+        if not data:
+            raise HTTPException(status_code=404, detail="No data found for scheme")
+        return data
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.get("/")
 async def read_root():
     return {"message": "Welcome to the Stock Analysis API!"}
