@@ -38,12 +38,7 @@ app = FastAPI(
 # Configure CORS with more specific settings
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://localhost:8000",
-        "https://spendly.vercel.app",
-        "https://spendly-seven.vercel.app"  # Add your Vercel deployment URL
-    ],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],  # Allow all methods
     allow_headers=["*"],
