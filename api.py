@@ -203,5 +203,10 @@ async def get_mutual_fund(scheme_code: str):
 async def read_root():
     return {"message": "Welcome to the Stock Analysis API!"}
 
+@app.head("/")
+async def head_root():
+    """Handle HEAD requests (for uptime monitoring)"""
+    return {}
+
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
