@@ -6,7 +6,7 @@ from stock_analysis import get_top_stock_recommendations
 from stock_database import StockDatabase
 import uvicorn
 import requests
-from typing import List, Optional
+from typing import List, Optional, Dict
 import json
 import sys
 import os
@@ -145,14 +145,40 @@ async def get_top_recommendations(request: BudgetRequest):
 async def top_recommendations_options():
     return {}
 
+@app.post("/initialize-stocks")
+async def initialize_stocks():
+    """Initialize or refresh stock data and mutual funds data"""
+    try:
+        # Initialize stock cache
+        stock_db.refresh_all_stocks()
+        
+        # Fetch mutual funds data
+        results = fetch_mutual_funds()
+        
+        return {
+            "message": "Stock data and mutual funds initialized successfully",
+            "stocks_updated": True,
+            "mutual_funds_updated": bool(results)
+        }
+    except Exception as e:
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error initializing data: {str(e)}"
+        )
+
 @app.on_event("startup")
 async def startup_event():
+    """Minimal startup event that just prints ready message"""
+    print("API is ready to serve requests")
+
+@app.post("/refresh-stocks")
+async def refresh_stocks():
+    """Endpoint to manually refresh all cached stock data"""
     try:
-        # Run the mutual fund data fetcher on startup
-        results = fetch_mutual_funds()
-        print("Mutual fund data fetched and saved successfully")
+        stock_db.refresh_all_stocks()
+        return {"message": "Stock cache refreshed successfully"}
     except Exception as e:
-        print(f"Error during mutual fund data fetch: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/mutual-funds")
 async def get_mutual_funds():

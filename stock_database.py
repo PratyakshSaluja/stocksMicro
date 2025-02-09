@@ -7,6 +7,8 @@ import logging
 from phi.tools.yfinance import YFinanceTools
 import requests
 from decimal import Decimal
+import concurrent.futures
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 logger = logging.getLogger(__name__)
 
@@ -40,7 +42,7 @@ class StockDatabase:
         except:
             return 1/83.0  # Fallback exchange rate
 
-    def _get_stock_price(self, symbol: str) -> tuple:
+    def get_stock_price(self, symbol: str) -> tuple:
         """Get stock price with reliable fallbacks"""
         try:
             stock = yf.Ticker(symbol)
@@ -91,51 +93,72 @@ class StockDatabase:
         except Exception as e:
             logger.error(f"Error saving cache: {e}")
 
+    def _fetch_single_stock(self, symbol: str) -> Dict:
+        """Fetch data for a single stock (to be used with ThreadPoolExecutor)"""
+        try:
+            # Get price and currency using the instance method
+            price, currency = self.get_stock_price(symbol)
+            
+            # Convert price to USD if in INR
+            if currency == 'INR':
+                price = price * self.inr_to_usd_rate
+
+            # Get stock info
+            stock = yf.Ticker(symbol)
+            info = stock.info
+            
+            # Convert market cap to USD if in INR
+            market_cap = info.get('marketCap', 0)
+            if currency == 'INR':
+                market_cap = market_cap * self.inr_to_usd_rate
+            
+            # Format market cap in billions
+            market_cap_billions = market_cap / 1_000_000_000 if market_cap else 0
+            
+            logger.info(f"Fetched {symbol}: ${price:.2f} USD")
+            
+            return {
+                'symbol': symbol,
+                'price': price,
+                'original_price': price / self.inr_to_usd_rate if currency == 'INR' else price,
+                'name': info.get('longName', symbol),
+                'recommendation': info.get('recommendationKey', 'N/A'),
+                'forward_pe': info.get('forwardPE', 'N/A'),
+                'dividend_yield': info.get('dividendYield', 0),
+                'market_cap': round(market_cap_billions, 2),
+                'currency': currency,
+                'last_updated': datetime.now().isoformat(),
+                'volume': info.get('volume', 0),
+                'avg_volume': info.get('averageVolume', 0),
+                'fifty_day_average': info.get('fiftyDayAverage', 0)
+            }
+            
+        except Exception as e:
+            logger.error(f"Error updating {symbol}: {e}")
+            return None
+
     def update_stock_data(self, symbols: List[str]):
-        """Update stock data for given symbols using multiple data sources"""
+        """Update stock data for given symbols using multiple threads"""
         self.inr_to_usd_rate = self._get_exchange_rate()  # Refresh exchange rate
         
-        for symbol in symbols:
-            try:
-                # Get price and currency
-                price, currency = self._get_stock_price(symbol)
-                
-                # Convert price to USD if in INR
-                if currency == 'INR':
-                    price = price * self.inr_to_usd_rate
-
-                # Get stock info
-                stock = yf.Ticker(symbol)
-                info = stock.info
-                
-                # Convert market cap to USD if in INR
-                market_cap = info.get('marketCap', 0)
-                if currency == 'INR':
-                    market_cap = market_cap * self.inr_to_usd_rate
-                
-                # Format market cap in billions
-                market_cap_billions = market_cap / 1_000_000_000 if market_cap else 0
-                
-                logger.info(f"Fetched {symbol}: ${price:.2f} USD")
-                
-                self.cache[symbol] = {
-                    'symbol': symbol,
-                    'price': price,
-                    'name': info.get('longName', symbol),
-                    'recommendation': info.get('recommendationKey', 'N/A'),
-                    'forward_pe': info.get('forwardPE', 'N/A'),
-                    'dividend_yield': info.get('dividendYield', 0),
-                    'market_cap': round(market_cap_billions, 2),  # Store in billions USD
-                    'currency': 'USD',  # Always store as USD
-                    'last_updated': datetime.now().isoformat(),
-                    'volume': info.get('volume', 0),
-                    'avg_volume': info.get('averageVolume', 0),
-                    'fifty_day_average': info.get('fiftyDayAverage', 0)
-                }
-                
-            except Exception as e:
-                logger.error(f"Error updating {symbol}: {e}")
-                continue
+        # Use ThreadPoolExecutor to fetch data in parallel
+        max_workers = min(len(symbols), 10)  # Limit max concurrent threads
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # Submit all tasks
+            future_to_symbol = {
+                executor.submit(self._fetch_single_stock, symbol): symbol 
+                for symbol in symbols
+            }
+            
+            # Process completed tasks
+            for future in as_completed(future_to_symbol):
+                symbol = future_to_symbol[future]
+                try:
+                    data = future.result()
+                    if data:
+                        self.cache[symbol] = data
+                except Exception as e:
+                    logger.error(f"Error processing {symbol}: {e}")
         
         self.last_updated = datetime.now()
         self.save_cache()
@@ -162,9 +185,24 @@ class StockDatabase:
 
     def refresh_all_stocks(self):
         """Refresh all cached stock data"""
-        if datetime.now() - self.last_updated > self.cache_duration:
-            all_symbols = list(self.cache.keys())
-            self.update_stock_data(all_symbols)
+        # Always update these default stocks if cache is empty
+        default_stocks = [
+            'RELIANCE.NS', 'TCS.NS', 'HDFCBANK.NS', 'INFY.NS', 'ICICIBANK.NS',
+            'HINDUNILVR.NS', 'ITC.NS', 'SBIN.NS', 'BHARTIARTL.NS', 'KOTAKBANK.NS',
+            'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 'META'
+        ]
+        
+        # Use cached symbols if available, otherwise use defaults
+        symbols_to_update = list(self.cache.keys()) if self.cache else default_stocks
+        
+        # Add any missing default stocks
+        for symbol in default_stocks:
+            if symbol not in symbols_to_update:
+                symbols_to_update.append(symbol)
+        
+        logger.info(f"Refreshing {len(symbols_to_update)} stocks...")
+        self.update_stock_data(symbols_to_update)
+        logger.info("Stock refresh complete")
 
     def check_price_only(self, symbol: str) -> float:
         """Quick check of stock price without fetching full data"""
