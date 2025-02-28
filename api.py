@@ -64,6 +64,9 @@ stock_db = StockDatabase()
 @app.post("/analyze-stocks", response_model=BudgetResponse)
 async def analyze_stocks(request: BudgetRequest):
     try:
+        # Refresh stock data first to ensure fresh stock prices
+        stock_db.refresh_all_stocks()
+        
         # Convert budget to USD first
         budget_usd = inr_to_usd(request.budget_inr)
         
@@ -76,7 +79,7 @@ async def analyze_stocks(request: BudgetRequest):
                 "recommendations": f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})"
             }
         
-        # Get cached stocks within budget
+        # Get freshly updated stocks within budget
         stocks_in_budget = stock_db.get_stocks_in_budget(budget_usd)
         
         # Format results
@@ -106,7 +109,11 @@ async def analyze_stocks_options():
 
 @app.post("/top-recommendations", response_model=TopRecommendationsResponse)
 async def get_top_recommendations(request: BudgetRequest):
-    try:       # Convert budget to USD first
+    try:
+        # Don't refresh stocks here since analyze-stocks already does it
+        # and both endpoints are called together on the same page
+        
+        # Convert budget to USD first
         budget_usd = inr_to_usd(request.budget_inr)
         
         # Quick validation
@@ -116,7 +123,7 @@ async def get_top_recommendations(request: BudgetRequest):
                 "stocks": []
             }
         
-        # Get cached stocks within budget
+        # Get stocks within budget using the current cache
         stocks_in_budget = stock_db.get_stocks_in_budget(budget_usd)
         
         if not stocks_in_budget:
@@ -125,7 +132,7 @@ async def get_top_recommendations(request: BudgetRequest):
                 "stocks": []
             }
         
-        # Get top 5 recommendations
+        # Get top 5 recommendations based on the same data as analyze-stocks
         recommendations = get_top_stock_recommendations(stocks_in_budget, top_n=5)
         
         return {
