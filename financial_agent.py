@@ -5,11 +5,8 @@ from phi.tools.duckduckgo import DuckDuckGo
 from dotenv import load_dotenv
 import os
 import yfinance as yf
-from typing import List, Dict
-import pandas as pd
+from typing import Dict
 import logging
-import requests
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from stock_database import StockDatabase
 from stock_analysis import get_top_stock_recommendations
 
@@ -19,7 +16,6 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 groq_api_key = os.getenv("GROQ_API_KEY")
 
-# Initialize Groq model with better model
 groq_model = Groq(
     api_key=groq_api_key,
     id="llama3-8b-8192"
