@@ -1,6 +1,6 @@
 phidata 
 python-dotenv
-yfinance
+yfinance==0.2.57
 packaging
 duckduckgo-search
 fastapi
