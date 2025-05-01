@@ -8,3 +8,6 @@ uvicorn
 groq
 openai
 pydantic
+pandas
+numpy
+scikit-learn

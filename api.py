@@ -11,6 +11,11 @@ import json
 import sys
 import os
 from pathlib import Path
+import yfinance as yf
+import pandas as pd
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
 
 # Ensure the current directory is in the Python path
 current_dir = Path(__file__).parent
@@ -58,6 +63,25 @@ class BudgetResponse(BaseModel):
 class TopRecommendationsResponse(BaseModel):
     recommendations: str
     stocks: list
+
+class StockInfo(BaseModel):
+    current_price: Optional[float] = None
+    previous_close: Optional[float] = None
+    day_high: Optional[float] = None
+    day_low: Optional[float] = None
+    fifty_two_week_high: Optional[float] = None
+    fifty_two_week_low: Optional[float] = None
+    volume: Optional[int] = None
+    average_volume: Optional[int] = None
+
+class PredictionData(BaseModel):
+    predicted_next_day_close: Optional[float] = None
+
+class PredictionResponse(BaseModel):
+    ticker: str
+    info: Optional[StockInfo] = None
+    prediction: Optional[PredictionData] = None
+    error: Optional[str] = None
 
 stock_db = StockDatabase()
 
@@ -214,6 +238,68 @@ async def read_root():
 async def head_root():
     """Handle HEAD requests (for uptime monitoring)"""
     return {}
+
+@app.get("/predict-stock/{ticker}", response_model=PredictionResponse)
+async def predict_stock(ticker: str):
+    """Predict the next day's closing price for a given stock ticker using Linear Regression."""
+    try:
+        stock = yf.Ticker(ticker)
+        hist = stock.history(period="1y") # Fetch 1 year of historical data
+
+        if hist.empty:
+            raise HTTPException(status_code=404, detail=f"No historical data found for ticker: {ticker}")
+
+        # Feature Engineering: Use lagged close price to predict next day's close
+        df = hist[['Close']].copy()
+        df['Target'] = df['Close'].shift(-1) # Target is the next day's close price
+        df.dropna(inplace=True) # Remove last row with NaN target
+
+        if len(df) < 10: # Need sufficient data for training
+             raise HTTPException(status_code=400, detail=f"Not enough historical data to train model for ticker: {ticker}")
+
+        X = df[['Close']] # Feature: Today's Close Price
+        y = df['Target']  # Target: Tomorrow's Close Price
+
+        # Train a simple Linear Regression model
+        model = LinearRegression()
+        model.fit(X, y)
+
+        # Predict the next day's price based on the most recent closing price
+        last_close_price = hist['Close'].iloc[-1]
+        prediction_input = np.array([[last_close_price]])
+        predicted_price = model.predict(prediction_input)[0]
+
+        # Fetch additional info
+        stock_info_data = stock.info
+        stock_info = StockInfo(
+            current_price=stock_info_data.get('regularMarketPrice'),
+            previous_close=stock_info_data.get('previousClose'),
+            day_high=stock_info_data.get('dayHigh'),
+            day_low=stock_info_data.get('dayLow'),
+            fifty_two_week_high=stock_info_data.get('fiftyTwoWeekHigh'),
+            fifty_two_week_low=stock_info_data.get('fiftyTwoWeekLow'),
+            volume=stock_info_data.get('volume'),
+            average_volume=stock_info_data.get('averageVolume')
+        )
+
+        prediction_data = PredictionData(predicted_next_day_close=round(predicted_price, 2))
+
+        return PredictionResponse(
+            ticker=ticker,
+            info=stock_info,
+            prediction=prediction_data
+        )
+
+    except requests.exceptions.RequestException as e:
+         # Handle potential yfinance network errors
+        return PredictionResponse(ticker=ticker, error=f"Network error fetching data for {ticker}: {e}")
+    except HTTPException as e:
+        # Re-raise HTTP exceptions from checks (like 404 or 400)
+        raise e
+    except Exception as e:
+        # Catch other potential errors during processing
+        return PredictionResponse(ticker=ticker, error=f"An error occurred processing {ticker}: {str(e)}")
+
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
