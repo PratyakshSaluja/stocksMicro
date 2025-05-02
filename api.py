@@ -221,7 +221,7 @@ async def get_mutual_fund(scheme_code: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/top-mutual-funds", response_model=MutualFundRecommendationsResponse)
+@app.get("/top-mutual-funds", response_model=MutualFundRecommendationsResponse)
 async def get_top_mutual_funds():
     """Get top 5 recommended mutual funds with key metrics"""
     try:
