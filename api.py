@@ -83,9 +83,18 @@ class StockDataWithSentiment(BaseModel):
     sentiment: Optional[StockSentiment] = None
 
 # Corrected TopRecommendationsResponse definition
+class StockRecommendation(BaseModel):
+    symbol: str
+    score: float
+    price_score: float
+    analyst_rating: float
+    pe_score: float
+    dividend_score: float
+    volume_score: float
+    sentiment: Optional[StockSentiment] = None
+
 class TopRecommendationsResponse(BaseModel):
-    recommendations: str
-    stocks: List[StockDataWithSentiment] # Update to use the new model
+    top_stocks: List[StockRecommendation]
 
 class StockInfo(BaseModel):
     current_price: Optional[float] = None
@@ -181,82 +190,85 @@ async def get_top_recommendations(request: BudgetRequest):
         # Quick validation
         if budget_usd < 1:
             return TopRecommendationsResponse(
-                recommendations=f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})",
-                stocks=[]
+                top_stocks=[]
             )
 
         # Get stocks within budget using the current cache
         stocks_in_budget = stock_db.get_stocks_in_budget(budget_usd)
 
         if not stocks_in_budget:
-             return TopRecommendationsResponse(
-                recommendations=f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})",
-                stocks=[]
+            return TopRecommendationsResponse(
+                top_stocks=[]
             )
 
-        # Get top 5 recommended stock dictionaries (expecting 'symbol')
+        # Get top 5 recommended stocks with their scores
         top_stocks_data = stocks_in_budget[:5]
-        recommendations_text = get_top_stock_recommendations(stocks_in_budget, top_n=5) # Get the text summary
+        recommendations_text = get_top_stock_recommendations(stocks_in_budget, top_n=5)
+        
+        # Parse recommendations text to extract scores
+        import re
+        top_stocks = []
+        for line in recommendations_text.split('\n'):
+            if '|' in line and not line.startswith('|--') and not 'Stock |' in line:
+                parts = line.split('|')
+                if len(parts) >= 7:
+                    stock_rec = StockRecommendation(
+                        symbol=parts[1].strip(),
+                        score=float(parts[2].strip()),
+                        price_score=float(parts[3].strip()),
+                        analyst_rating=float(parts[4].strip()),
+                        pe_score=float(parts[5].strip()),
+                        dividend_score=float(parts[6].strip()),
+                        volume_score=float(parts[7].strip())
+                    )
+                    top_stocks.append(stock_rec)
 
         # Add sentiment analysis
-        stocks_with_sentiment = []
         if sentiment_pipeline: # Only proceed if the pipeline loaded correctly
-            for stock_data in top_stocks_data:
-                # Use 'symbol' based on the validation error feedback
-                ticker_symbol = stock_data.get('symbol')
+            for stock_rec in top_stocks:
                 sentiment_result = StockSentiment() # Initialize sentiment object
                 news_title_analyzed = None
 
-                # Prepare data for Pydantic model, ensuring 'symbol' is present
-                stock_data_for_pydantic = stock_data.copy()
-
-                if ticker_symbol:
-                    try:
-                        logging.info(f"--- Processing Ticker: {ticker_symbol} ---")
-                        logging.info(f"Fetching news for {ticker_symbol}...")
-                        stock_obj = yf.Ticker(ticker_symbol)
-                        news = stock_obj.news
-                        if news and len(news) > 0:
-                            first_news = news[0]
-                            # Correctly access title nested within 'content'
-                            news_title_analyzed = first_news.get('content', {}).get('title')
-                            if news_title_analyzed:
-                                logging.info(f"Analyzing title: '{news_title_analyzed}'")
-                                analysis = sentiment_pipeline(news_title_analyzed)
-                                if analysis and len(analysis) > 0:
-                                    sentiment_result.label = analysis[0].get('label')
-                                    sentiment_result.score = analysis[0].get('score')
-                                    logging.info(f"Sentiment for {ticker_symbol}: Label={sentiment_result.label}, Score={sentiment_result.score:.4f}")
-                                else:
-                                     sentiment_result.error = "Sentiment analysis returned empty result."
-                                     logging.warning(f"Sentiment analysis returned empty result for {ticker_symbol}")
+                try:
+                    logging.info(f"--- Processing Ticker: {stock_rec.symbol} ---")
+                    logging.info(f"Fetching news for {stock_rec.symbol}...")
+                    stock_obj = yf.Ticker(stock_rec.symbol)
+                    news = stock_obj.news
+                    if news and len(news) > 0:
+                        first_news = news[0]
+                        # Correctly access title nested within 'content'
+                        news_title_analyzed = first_news.get('content', {}).get('title')
+                        if news_title_analyzed:
+                            logging.info(f"Analyzing title: '{news_title_analyzed}'")
+                            analysis = sentiment_pipeline(news_title_analyzed)
+                            if analysis and len(analysis) > 0:
+                                sentiment_result.label = analysis[0].get('label')
+                                sentiment_result.score = analysis[0].get('score')
+                                logging.info(f"Sentiment for {stock_rec.symbol}: Label={sentiment_result.label}, Score={sentiment_result.score:.4f}")
                             else:
-                                sentiment_result.error = "First news item has no title."
-                                logging.warning(f"First news item has no title for {ticker_symbol}")
+                                 sentiment_result.error = "Sentiment analysis returned empty result."
+                                 logging.warning(f"Sentiment analysis returned empty result for {stock_rec.symbol}")
                         else:
-                            sentiment_result.error = "No news found for ticker."
-                            logging.info(f"No news found for ticker {ticker_symbol}")
-                    except Exception as news_err:
-                        logging.error(f"Error fetching or analyzing news for {ticker_symbol}: {news_err}", exc_info=True)
-                        sentiment_result.error = f"Error processing news: {str(news_err)}"
-                else:
-                    sentiment_result.error = "Symbol missing in stock data."
-                    logging.warning("Symbol missing in stock data item.")
+                            sentiment_result.error = "First news item has no title."
+                            logging.warning(f"First news item has no title for {stock_rec.symbol}")
+                    else:
+                        sentiment_result.error = "No news found for ticker."
+                        logging.info(f"No news found for ticker {stock_rec.symbol}")
+                except Exception as news_err:
+                    logging.error(f"Error fetching or analyzing news for {stock_rec.symbol}: {news_err}", exc_info=True)
+                    sentiment_result.error = f"Error processing news: {str(news_err)}"
 
                 sentiment_result.news_title = news_title_analyzed # Store the title that was analyzed
+                stock_rec.sentiment = sentiment_result
 
-                # Create the final stock data object including sentiment
-                # Ensure the input dict matches the Pydantic model (uses 'symbol')
-                stock_data_final = StockDataWithSentiment(**stock_data_for_pydantic, sentiment=sentiment_result)
-                stocks_with_sentiment.append(stock_data_final)
         else:
-             # If pipeline failed to load, return stock data without sentiment
+             # If pipeline failed to load, set error sentiment for all stocks
              logging.warning("Sentiment pipeline not available. Skipping sentiment analysis.")
-             stocks_with_sentiment = [StockDataWithSentiment(**stock_data, sentiment=StockSentiment(error="Sentiment model not loaded")) for stock_data in top_stocks_data]
+             for stock_rec in top_stocks:
+                 stock_rec.sentiment = StockSentiment(error="Sentiment model not loaded")
 
         return TopRecommendationsResponse(
-            recommendations=recommendations_text,
-            stocks=stocks_with_sentiment
+            top_stocks=top_stocks
         )
 
     except Exception as e:
