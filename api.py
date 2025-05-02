@@ -1,28 +1,24 @@
 from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware  # Add this import
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-from financial_agent import analyze_stocks_in_budget, get_stock_recommendations_by_budget, inr_to_usd
+from financial_agent import inr_to_usd
 from stock_analysis import get_top_stock_recommendations
 from stock_database import StockDatabase
+from mutual_fund_analysis import get_fund_metrics
 import uvicorn
 import requests
-from typing import List, Optional, Dict
+from typing import Optional
 import json
 import sys
-import os
 from pathlib import Path
 import yfinance as yf
-import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
 
-# Ensure the current directory is in the Python path
 current_dir = Path(__file__).parent
 if str(current_dir) not in sys.path:
     sys.path.append(str(current_dir))
 
-# Import with better error handling
 try:
     from .test import fetch_latest_data, main as fetch_mutual_funds
 except ImportError:
@@ -40,15 +36,14 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Configure CORS with more specific settings
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["*"],  # Allow all methods
+    allow_methods=["*"],
     allow_headers=["*"],
     expose_headers=["*"],
-    max_age=3600,  # Cache preflight requests for 1 hour
+    max_age=3600,
 )
 
 class BudgetRequest(BaseModel):
@@ -63,6 +58,9 @@ class BudgetResponse(BaseModel):
 class TopRecommendationsResponse(BaseModel):
     recommendations: str
     stocks: list
+
+class MutualFundRecommendationsResponse(BaseModel):
+    funds: list[dict]
 
 class StockInfo(BaseModel):
     current_price: Optional[float] = None
@@ -134,20 +132,14 @@ async def analyze_stocks_options():
 @app.post("/top-recommendations", response_model=TopRecommendationsResponse)
 async def get_top_recommendations(request: BudgetRequest):
     try:
-        # Don't refresh stocks here since analyze-stocks already does it
-        # and both endpoints are called together on the same page
-        
-        # Convert budget to USD first
         budget_usd = inr_to_usd(request.budget_inr)
         
-        # Quick validation
         if budget_usd < 1:
             return {
                 "recommendations": f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})",
                 "stocks": []
             }
         
-        # Get stocks within budget using the current cache
         stocks_in_budget = stock_db.get_stocks_in_budget(budget_usd)
         
         if not stocks_in_budget:
@@ -156,12 +148,11 @@ async def get_top_recommendations(request: BudgetRequest):
                 "stocks": []
             }
         
-        # Get top 5 recommendations based on the same data as analyze-stocks
         recommendations = get_top_stock_recommendations(stocks_in_budget, top_n=5)
         
         return {
             "recommendations": recommendations,
-            "stocks": stocks_in_budget[:5]  # Include full stock data for top 5
+            "stocks": stocks_in_budget[:5]
         }
         
     except Exception as e:
@@ -229,6 +220,45 @@ async def get_mutual_fund(scheme_code: str):
         return data
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/top-mutual-funds", response_model=MutualFundRecommendationsResponse)
+async def get_top_mutual_funds():
+    """Get top 5 recommended mutual funds with key metrics"""
+    try:
+        # Fetch mutual fund data
+        results = fetch_mutual_funds()
+        if not results:
+            with open("filtered_schemes_2025.json", "r") as f:
+                results = json.load(f)
+        
+        if not results:
+            raise HTTPException(status_code=404, detail="No mutual fund data available")
+        
+        # Get metrics for all funds
+        funds_with_metrics = []
+        for fund in results:
+            metrics = get_fund_metrics(fund)
+            if metrics:
+                funds_with_metrics.append(metrics)
+        
+        # Sort by 1-year returns (or 6-month if 1-year not available)
+        def get_sort_key(fund):
+            return (
+                fund.get('1_year_return', 0) or 
+                fund.get('6_month_return', 0) or 
+                fund.get('3_month_return', 0) or 
+                fund.get('1_month_return', 0)
+            )
+        
+        top_funds = sorted(funds_with_metrics, key=get_sort_key, reverse=True)[:5]
+        return {"funds": top_funds}
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.options("/top-mutual-funds")
+async def top_mutual_funds_options():
+    return {}
 
 @app.get("/")
 async def read_root():

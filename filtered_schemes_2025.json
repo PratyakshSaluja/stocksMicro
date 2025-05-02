@@ -1,0 +1,3602 @@
+[
+    {
+        "meta": {
+            "fund_house": "Union Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Short Duration Fund",
+            "scheme_code": 153240,
+            "scheme_name": "Union Short Duration Fund - Regular Plan - Growth Option",
+            "isin_growth": "INF582M01KK1",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.27820"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Axis Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153244,
+            "scheme_name": "Axis Nifty500 Momentum 50 Index Fund - Direct Plan - Growth Option",
+            "isin_growth": "INF846KA1044",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.30010"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Union Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Short Duration Fund",
+            "scheme_code": 153242,
+            "scheme_name": "Union Short Duration Fund - Direct Plan - Growth Option",
+            "isin_growth": "INF582M01KO3",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.28970"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Union Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Short Duration Fund",
+            "scheme_code": 153243,
+            "scheme_name": "Union Short Duration Fund - Direct Plan - IDCW Option",
+            "isin_growth": "INF582M01KP0",
+            "isin_div_reinvestment": "INF582M01KQ8"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.28970"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "LIC Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Hybrid Scheme - Multi Asset Allocation",
+            "scheme_code": 153247,
+            "scheme_name": "LIC MF Multi Asset Allocation Fund-Direct Plan-IDCW",
+            "isin_growth": "INF767K01RY8",
+            "isin_div_reinvestment": "INF767K01RX0"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.70640"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "LIC Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Hybrid Scheme - Multi Asset Allocation",
+            "scheme_code": 153248,
+            "scheme_name": "LIC MF Multi Asset Allocation Fund-Regular Plan-Growth",
+            "isin_growth": "INF767K01RW2",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.66730"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Union Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Short Duration Fund",
+            "scheme_code": 153241,
+            "scheme_name": "Union Short Duration Fund - Regular Plan - IDCW Option",
+            "isin_growth": "INF582M01KL9",
+            "isin_div_reinvestment": "INF582M01KM7"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.27820"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "LIC Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Hybrid Scheme - Multi Asset Allocation",
+            "scheme_code": 153249,
+            "scheme_name": "LIC MF Multi Asset Allocation Fund-Regular Plan-IDCW",
+            "isin_growth": "INF767K01RV4",
+            "isin_div_reinvestment": "INF767K01RU6"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.66730"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153253,
+            "scheme_name": "SBI Nifty Bank Index Fund-Regular Plan- Growth",
+            "isin_growth": "INF200KB1530",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.91740"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153251,
+            "scheme_name": "SBI Nifty Bank Index Fund- Regular Plan- Income Distribution Cum Capital Withdrawal Option",
+            "isin_growth": "INF200KB1548",
+            "isin_div_reinvestment": "INF200KB1555"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.91740"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Motilal Oswal Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153259,
+            "scheme_name": "Motilal Oswal Innovation Opportunities Fund - Direct Plan- IDCW",
+            "isin_growth": "INF247L01EK6",
+            "isin_div_reinvestment": "INF247L01EL4"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.97530"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Edelweiss Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153254,
+            "scheme_name": "Edelweiss Consumption Fund - Direct - IDCW - Payout",
+            "isin_growth": "INF754K01TZ9",
+            "isin_div_reinvestment": "INF754K01UA0"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.70380"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ITI Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153263,
+            "scheme_name": "ITI Bharat Consumption Fund - Regular Plan Plan - Growth",
+            "isin_growth": "INF00XX01DD8",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.75190"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "LIC Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Hybrid Scheme - Multi Asset Allocation",
+            "scheme_code": 153246,
+            "scheme_name": "LIC MF Multi Asset Allocation Fund-Direct Plan-Growth",
+            "isin_growth": "INF767K01RZ5",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.70640"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ITI Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153261,
+            "scheme_name": "ITI Bharat Consumption Fund - Direct Plan - IDCW Option",
+            "isin_growth": "INF00XX01DH9",
+            "isin_div_reinvestment": "INF00XX01DI7"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.78610"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153252,
+            "scheme_name": "SBI Nifty Bank Index Fund-Direct Plan- Income Distribution Cum Capital Withdrawal Option",
+            "isin_growth": "INF200KB1571",
+            "isin_div_reinvestment": "INF200KB1589"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.92990"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153250,
+            "scheme_name": "SBI Nifty Bank Index Fund-Direct Plan- Growth",
+            "isin_growth": "INF200KB1563",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.92990"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Motilal Oswal Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153257,
+            "scheme_name": "Motilal Oswal Innovation Opportunities Fund- Regular Plan- IDCW",
+            "isin_growth": "INF247L01EN0",
+            "isin_div_reinvestment": "INF247L01EO8"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.95000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "UTI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153272,
+            "scheme_name": "UTI Nifty Midsmallcap 400 Momentum Quality 100 Index Fund - Direct Plan - Growth Option",
+            "isin_growth": "INF789F1AB22",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.50160"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "HDFC Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153264,
+            "scheme_name": "HDFC Nifty100 Quality 30 Index Fund - Direct Plan",
+            "isin_growth": "INF179KC1JF5",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.25220"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "UTI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153271,
+            "scheme_name": "UTI Nifty India Manufacturing Index Fund - Regular Plan - Growth Option",
+            "isin_growth": "INF789F1AB30",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.45040"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Axis Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153245,
+            "scheme_name": "Axis Nifty500 Momentum 50 Index Fund - Regular Plan - Growth Option",
+            "isin_growth": "INF846KA1036",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.28130"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Edelweiss Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153255,
+            "scheme_name": "Edelweiss Consumption Fund - Regular - Growth",
+            "isin_growth": "INF754K01UC6",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.66850"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Motilal Oswal Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153256,
+            "scheme_name": "Motilal Oswal Innovation Opportunities Fund- Regular Plan- Growth",
+            "isin_growth": "INF247L01EM2",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.94990"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ITI Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153260,
+            "scheme_name": "ITI Bharat Consumption Fund - Direct Plan - Growth",
+            "isin_growth": "INF00XX01DG1",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.78610"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Shriram Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153280,
+            "scheme_name": "Shriram Unclaimed Redemption Liquid Fund",
+            "isin_growth": null,
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "01-05-2025",
+                "nav": "1018.96220"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "HSBC Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153269,
+            "scheme_name": "HSBC Financial Services Fund - Direct IDCW",
+            "isin_growth": "INF336L01RW4",
+            "isin_div_reinvestment": "INF336L01RV6"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.92570"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Nippon India Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153277,
+            "scheme_name": "Nippon India Active Momentum Fund- Direct Plan IDCW Option",
+            "isin_growth": "INF204KC1EL3",
+            "isin_div_reinvestment": "INF204KC1EM1"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.96420"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Shriram Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153281,
+            "scheme_name": "Shriram Unclaimed Redemption Stable Scheme Liquid Fund",
+            "isin_growth": null,
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "01-05-2025",
+                "nav": "1000.00000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Nippon India Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153274,
+            "scheme_name": "Nippon India Active Momentum Fund-Direct Plan - Growth Option",
+            "isin_growth": "INF204KC1EK5",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.96420"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ITI Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153262,
+            "scheme_name": "ITI Bharat Consumption Fund - Regular Plan - IDCW Option",
+            "isin_growth": "INF00XX01DE6",
+            "isin_div_reinvestment": "INF00XX01DF3"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.75190"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "HSBC Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153267,
+            "scheme_name": "HSBC Financial Services Fund - Regular Growth",
+            "isin_growth": "INF336L01RR4",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.89750"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Nippon India Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153278,
+            "scheme_name": "Nippon India Active Momentum Fund- Regular Plan- IDCW Option",
+            "isin_growth": "INF204KC1EI9",
+            "isin_div_reinvestment": "INF204KC1EJ7"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.94620"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Nippon India Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153276,
+            "scheme_name": "Nippon India Active Momentum Fund - Regular Plan- Growth Option",
+            "isin_growth": "INF204KC1EH1",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.94620"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "UTI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153270,
+            "scheme_name": "UTI Nifty India Manufacturing Index Fund - Direct Plan - Growth Option",
+            "isin_growth": "INF789F1AB48",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.46360"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "HSBC Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153266,
+            "scheme_name": "HSBC Financial Services Fund - Direct Growth",
+            "isin_growth": "INF336L01RU8",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.92590"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "HSBC Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153268,
+            "scheme_name": "HSBC Financial Services Fund - Regular IDCW",
+            "isin_growth": "INF336L01RT0",
+            "isin_div_reinvestment": "INF336L01RS2"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.89750"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Motilal Oswal Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153258,
+            "scheme_name": "Motilal Oswal Innovation Opportunities Fund - Direct Plan- Growth",
+            "isin_growth": "INF247L01EJ8",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.97520"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "UTI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153273,
+            "scheme_name": "UTI Nifty Midsmallcap 400 Momentum Quality 100 Index Fund - Regular Plan - Growth Option",
+            "isin_growth": "INF789F1AB06",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.48700"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "HDFC Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153265,
+            "scheme_name": "HDFC Nifty100 Quality 30 Index Fund - Regular Plan",
+            "isin_growth": "INF179KC1JE8",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.24270"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153286,
+            "scheme_name": "Kotak BSE Sensex Index Fund- Direct - Growth",
+            "isin_growth": "INF174KA1UV6",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.57100"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153284,
+            "scheme_name": "Kotak BSE Sensex Index Fund - Regular - Growth",
+            "isin_growth": "INF174KA1US2",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.56700"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Shriram Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153283,
+            "scheme_name": "Shriram Unclaimed IDCW Stable Scheme Liquid Fund",
+            "isin_growth": null,
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "01-05-2025",
+                "nav": "1000.00000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bank of India Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Money Market Fund",
+            "scheme_code": 153294,
+            "scheme_name": "Bank of India Money Market Fund - Direct - Growth",
+            "isin_growth": "INF761K01GO5",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.22520"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mahindra Manulife Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Equity Scheme - Value Fund",
+            "scheme_code": 153303,
+            "scheme_name": "Mahindra Manulife Value Fund - Direct Plan - Growth",
+            "isin_growth": "INF174V01CI9",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.81730"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153285,
+            "scheme_name": "Kotak BSE Sensex Index Fund - Regular - IDCW",
+            "isin_growth": "INF174KA1UT0",
+            "isin_div_reinvestment": "INF174KA1UU8"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.56800"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mahindra Manulife Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Equity Scheme - Value Fund",
+            "scheme_code": 153302,
+            "scheme_name": "Mahindra Manulife Value Fund - Regular Plan - IDCW",
+            "isin_growth": "INF174V01CH1",
+            "isin_div_reinvestment": "INF174V01CG3"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.78430"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153287,
+            "scheme_name": "Kotak BSE Sensex Index Fund- Direct - IDCW",
+            "isin_growth": "INF174KA1UQ6",
+            "isin_div_reinvestment": "INF174KA1UR4"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.57100"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Invesco Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153291,
+            "scheme_name": "Invesco India Business Cycle Fund - Direct Plan - Growth",
+            "isin_growth": "INF205KA1AI8",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.91000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Invesco Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153288,
+            "scheme_name": "Invesco India Business Cycle Fund - Growth",
+            "isin_growth": "INF205KA1AF4",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.88000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Shriram Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153282,
+            "scheme_name": "Shriram Unclaimed IDCW Liquid Fund",
+            "isin_growth": null,
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "01-05-2025",
+                "nav": "1007.96880"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bank of India Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Money Market Fund",
+            "scheme_code": 153298,
+            "scheme_name": "Bank of India Money Market Fund - Regular - Daily IDCW",
+            "isin_growth": null,
+            "isin_div_reinvestment": "INF761K01GT4"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.21200"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mahindra Manulife Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Equity Scheme - Value Fund",
+            "scheme_code": 153304,
+            "scheme_name": "Mahindra Manulife Value Fund - Regular Plan - Growth",
+            "isin_growth": "INF174V01CF5",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.78430"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bank of India Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Money Market Fund",
+            "scheme_code": 153293,
+            "scheme_name": "Bank of India Money Market Fund - Regular - Growth",
+            "isin_growth": "INF761K01GS6",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.21190"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bank of India Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Money Market Fund",
+            "scheme_code": 153296,
+            "scheme_name": "Bank of India Money Market Fund - Direct - Daily IDCW",
+            "isin_growth": null,
+            "isin_div_reinvestment": "INF761K01GP2"
+        },
+        "data": [
+            {
+                "date": "04-04-2025",
+                "nav": "10.11110"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bank of India Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Money Market Fund",
+            "scheme_code": 153299,
+            "scheme_name": "Bank of India Money Market Fund - Regular - Monthly IDCW",
+            "isin_growth": "INF761K01GW8",
+            "isin_div_reinvestment": "INF761K01GV0"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.21200"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153312,
+            "scheme_name": "Kotak CRISIL - IBX AAA Bond Financial Services Index Dec 2026 Fund - Direct - IDCW",
+            "isin_growth": "INF174KA1UY0",
+            "isin_div_reinvestment": "INF174KA1UZ7"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.22940"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bank of India Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Money Market Fund",
+            "scheme_code": 153301,
+            "scheme_name": "Bank of India Money Market Fund - Regular - Weekly IDCW",
+            "isin_growth": null,
+            "isin_div_reinvestment": "INF761K01GU2"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.21220"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Invesco Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153289,
+            "scheme_name": "Invesco India Business Cycle Fund - IDCW",
+            "isin_growth": "INF205KA1AG2",
+            "isin_div_reinvestment": "INF205KA1AH0"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.88000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Invesco Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153290,
+            "scheme_name": "Invesco India Business Cycle Fund - Direct Plan - IDCW",
+            "isin_growth": "INF205KA1AJ6",
+            "isin_div_reinvestment": "INF205KA1AK4"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.91000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bank of India Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Money Market Fund",
+            "scheme_code": 153295,
+            "scheme_name": "Bank of India Money Market Fund - Direct - Monthly IDCW",
+            "isin_growth": "INF761K01GR8",
+            "isin_div_reinvestment": "INF761K01GX6"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.22390"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bajaj Finserv Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Equity Scheme - Multi Cap Fund",
+            "scheme_code": 153306,
+            "scheme_name": "BAJAJ FINSERV MULTI CAP FUND - DIRECT - IDCW",
+            "isin_growth": "INF0QA701AW5",
+            "isin_div_reinvestment": "INF0QA701AX3"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.67800"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153314,
+            "scheme_name": "Kotak MSCI India ETF",
+            "isin_growth": "INF174KA1VD2",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "28.52700"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bajaj Finserv Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Equity Scheme - Multi Cap Fund",
+            "scheme_code": 153307,
+            "scheme_name": "BAJAJ FINSERV MULTI CAP FUND - REGULAR - GROWTH",
+            "isin_growth": "INF0QA701AS3",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.64700"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bajaj Finserv Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Equity Scheme - Multi Cap Fund",
+            "scheme_code": 153308,
+            "scheme_name": "BAJAJ FINSERV MULTI CAP FUND - REGULAR - IDCW",
+            "isin_growth": "INF0QA701AT1",
+            "isin_div_reinvestment": "INF0QA701AU9"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.64700"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bandhan Mutual Fund",
+            "scheme_type": "Close Ended Schemes",
+            "scheme_category": "Income",
+            "scheme_code": 153316,
+            "scheme_name": "Bandhan Fixed Maturity Plan (FMP) - Series 209 (93 Days) - Direct Plan - Growth",
+            "isin_growth": "INF194KB1JD2",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.16450"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153310,
+            "scheme_name": "Kotak CRISIL - IBX AAA Bond Financial Services Index Dec 2026 Fund - Regular - IDCW",
+            "isin_growth": "INF174KA1VB6",
+            "isin_div_reinvestment": "INF174KA1VC4"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.22530"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153313,
+            "scheme_name": "Kotak CRISIL - IBX AAA Bond Financial Services Index Dec 2026 Fund - Direct - Growth",
+            "isin_growth": "INF174KA1UX2",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.22950"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mahindra Manulife Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Equity Scheme - Value Fund",
+            "scheme_code": 153305,
+            "scheme_name": "Mahindra Manulife Value Fund - Direct Plan - IDCW",
+            "isin_growth": "INF174V01CJ7",
+            "isin_div_reinvestment": "INF174V01CK5"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.81730"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bajaj Finserv Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Equity Scheme - Multi Cap Fund",
+            "scheme_code": 153309,
+            "scheme_name": "BAJAJ FINSERV MULTI CAP FUND - DIRECT - GROWTH",
+            "isin_growth": "INF0QA701AV7",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.67800"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bandhan Mutual Fund",
+            "scheme_type": "Close Ended Schemes",
+            "scheme_category": "Income",
+            "scheme_code": 153317,
+            "scheme_name": "Bandhan Fixed Maturity Plan (FMP) - Series 209 (93 Days) - Regular Plan - Growth",
+            "isin_growth": "INF194KB1JG5",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.16210"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bandhan Mutual Fund",
+            "scheme_type": "Close Ended Schemes",
+            "scheme_category": "Income",
+            "scheme_code": 153318,
+            "scheme_name": "Bandhan Fixed Maturity Plan (FMP) - Series 209 (93 Days) - Regular Plan - IDCW",
+            "isin_growth": "INF194KB1JH3",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.16210"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153311,
+            "scheme_name": "Kotak CRISIL - IBX AAA Bond Financial Services Index Dec 2026 Fund - Regular - Growth",
+            "isin_growth": "INF174KA1VA8",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.22530"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153315,
+            "scheme_name": "Kotak Nifty 100 Equal Weight ETF",
+            "isin_growth": "INF174KA1UW4",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "31.14300"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bandhan Mutual Fund",
+            "scheme_type": "Close Ended Schemes",
+            "scheme_category": "Income",
+            "scheme_code": 153319,
+            "scheme_name": "Bandhan Fixed Maturity Plan (FMP) - Series 209 (93 Days) - Direct Plan - IDCW",
+            "isin_growth": "INF194KB1JE0",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.16450"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153323,
+            "scheme_name": "SBI Nifty IT Index Fund - Regular Plan - Growth",
+            "isin_growth": "INF200KB1597",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "8.82970"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153322,
+            "scheme_name": "SBI Nifty IT Index Fund - Regular Plan - Income Distribution Cum Capital Withdrawal Option (IDCW)",
+            "isin_growth": "INF200KB1605",
+            "isin_div_reinvestment": "INF200KB1613"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "8.82970"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Helios Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Equity Scheme - Mid Cap Fund",
+            "scheme_code": 153324,
+            "scheme_name": "Helios Mid Cap Fund - Direct Plan - IDCW Option",
+            "isin_growth": "INF0R8701335",
+            "isin_div_reinvestment": "INF0R8701343"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.65000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Helios Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Equity Scheme - Mid Cap Fund",
+            "scheme_code": 153326,
+            "scheme_name": "Helios Mid Cap Fund - Direct Plan - Growth Option",
+            "isin_growth": "INF0R8701327",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.65000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Groww Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153329,
+            "scheme_name": "Groww Nifty 200 ETF",
+            "isin_growth": "INF666M01JV1",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.80330"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Helios Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Equity Scheme - Mid Cap Fund",
+            "scheme_code": 153327,
+            "scheme_name": "Helios Mid Cap Fund - Regular Plan - Growth Plan",
+            "isin_growth": "INF0R8701293",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.63000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Helios Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Equity Scheme - Mid Cap Fund",
+            "scheme_code": 153325,
+            "scheme_name": "Helios Mid Cap Fund - Regular Plan - IDCW Option",
+            "isin_growth": "INF0R8701301",
+            "isin_div_reinvestment": "INF0R8701319"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.63000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Angel One Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153330,
+            "scheme_name": "ANGEL ONE NIFTY TOTAL MARKET INDEX FUND DIRECT PLAN GROWTH OPTION",
+            "isin_growth": "INF1J2R01023",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "02-05-2025",
+                "nav": "11.04810"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Union Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153338,
+            "scheme_name": "Union Gold ETF Fund of Fund - Regular Plan - Growth Option",
+            "isin_growth": "INF582M01KT2",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.05000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Union Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153341,
+            "scheme_name": "Union Gold ETF Fund of Fund - Regular Plan - IDCW Option",
+            "isin_growth": "INF582M01KU0",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.05000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Edelweiss Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153334,
+            "scheme_name": "Edelweiss CRISIL IBX AAA Bond NBFC HFC Jun 2027 Index Fund - Regular Plan - Growth Option",
+            "isin_growth": "INF754K01UK9",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.23490"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Edelweiss Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153335,
+            "scheme_name": "Edelweiss CRISIL IBX AAA Bond NBFC HFC Jun 2027 Index Fund - Direct Plan - Growth Option",
+            "isin_growth": "INF754K01UG7",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.23910"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Union Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153340,
+            "scheme_name": "Union Gold ETF Fund of Fund - Direct Plan - Growth Option",
+            "isin_growth": "INF582M01LA0",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.05530"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Edelweiss Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153333,
+            "scheme_name": "Edelweiss CRISIL IBX AAA Bond NBFC HFC Jun 2027 Index Fund - Direct Plan - IDCW Option",
+            "isin_growth": "INF754K01UH5",
+            "isin_div_reinvestment": "INF754K01UI3"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.23910"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Union Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153337,
+            "scheme_name": "Union Gold ETF",
+            "isin_growth": "INF582M01KS4",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "93.20830"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153352,
+            "scheme_name": "KOTAK NIFTY COMMODITIES INDEX FUND-REGULAR-IDCW-PAYOUT & REINVESTMENT",
+            "isin_growth": "INF174KA1VI1",
+            "isin_div_reinvestment": "INF174KA1VJ9"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.62600"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153351,
+            "scheme_name": "KOTAK NIFTY COMMODITIES INDEX FUND-REGULAR GROWTH",
+            "isin_growth": "INF174KA1VH3",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.62600"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "DSP Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153346,
+            "scheme_name": "DSP Nifty Private Bank Index Fund - Regular - IDCW",
+            "isin_growth": "INF740KA1VL0",
+            "isin_div_reinvestment": "INF740KA1VM8"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.25140"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Edelweiss Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153336,
+            "scheme_name": "Edelweiss CRISIL IBX AAA Bond NBFC HFC Jun 2027 Index Fund - Regular Plan - IDCW Option",
+            "isin_growth": "INF754K01UL7",
+            "isin_div_reinvestment": "INF754K01UM5"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.23490"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Groww Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153342,
+            "scheme_name": "Groww Nifty 200 ETF FOF - Regular - Growth",
+            "isin_growth": "INF666M01JT5",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.17850"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Groww Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153328,
+            "scheme_name": "Groww Nifty 200 ETF FOF - Direct - Growth",
+            "isin_growth": "INF666M01JQ1",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.18910"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Angel One Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153331,
+            "scheme_name": "ANGEL ONE NIFTY TOTAL MARKET INDEX FUND REGULAR PLAN GROWTH OPTION",
+            "isin_growth": "INF1J2R01031",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "02-05-2025",
+                "nav": "11.03360"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Angel One Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153332,
+            "scheme_name": "ANGEL ONE NIFTY TOTAL MARKET ETF",
+            "isin_growth": "INF1J2R01015",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "02-05-2025",
+                "nav": "11.05210"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "DSP Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153345,
+            "scheme_name": "DSP Nifty Private Bank Index Fund - Direct - IDCW",
+            "isin_growth": "INF740KA1VO4",
+            "isin_div_reinvestment": "INF740KA1VP1"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.26430"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153320,
+            "scheme_name": "SBI Nifty IT Index Fund - Direct Plan - Growth",
+            "isin_growth": "INF200KB1621",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "8.83800"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Navi Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153363,
+            "scheme_name": "Navi Nifty Smallcap 250 Momentum quality index fund- Regular Plan",
+            "isin_growth": "INF959L01HP8",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.63110"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153321,
+            "scheme_name": "SBI Nifty IT Index Fund - Direct Plan - Income Distribution Cum Withdrawal Option (IDCW)",
+            "isin_growth": "INF200KB1639",
+            "isin_div_reinvestment": "INF200KB1647"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "8.83800"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Union Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153339,
+            "scheme_name": "Union Gold ETF Fund of Fund - Direct Plan - IDCW Option",
+            "isin_growth": "INF582M01KW6",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.05530"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "DSP Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153347,
+            "scheme_name": "DSP Nifty Private Bank Index Fund - Regular - Growth",
+            "isin_growth": "INF740KA1VK2",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.25140"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Groww Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153343,
+            "scheme_name": "Groww Nifty 200 ETF FOF - Direct - IDCW",
+            "isin_growth": "INF666M01JR9",
+            "isin_div_reinvestment": "INF666M01JS7"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.18900"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Sundaram Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153357,
+            "scheme_name": "360 ONE Gold ETF",
+            "isin_growth": "INF579M01BB5",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "93.20390"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bandhan Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153350,
+            "scheme_name": "Bandhan Nifty Next 50 Index Fund - Direct Plan - Growth",
+            "isin_growth": "INF194KB1JK7",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.28950"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Groww Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153344,
+            "scheme_name": "Groww Nifty 200 ETF FOF - Regular - IDCW",
+            "isin_growth": "INF666M01JU3",
+            "isin_div_reinvestment": "INF666M01JW9"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.17850"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bandhan Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153349,
+            "scheme_name": "Bandhan Nifty Next 50 Index Fund - Regular Plan - Growth",
+            "isin_growth": "INF194KB1JJ9",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.27450"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "WhiteOak Capital Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Hybrid Scheme - Equity Savings",
+            "scheme_code": 153355,
+            "scheme_name": "WhiteOak Capital Equity Savings Fund Direct Plan Growth",
+            "isin_growth": "INF03VN01AB7",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.38200"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "WhiteOak Capital Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Hybrid Scheme - Equity Savings",
+            "scheme_code": 153356,
+            "scheme_name": "WhiteOak Capital Equity Savings Fund Regular Plan Growth",
+            "isin_growth": "INF03VN01AC5",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.36200"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153354,
+            "scheme_name": "KOTAK NIFTY COMMODITIES INDEX FUND-DIRECT-IDCW-PAYOUT & REINVESTMENT",
+            "isin_growth": "INF174KA1VF7",
+            "isin_div_reinvestment": "INF174KA1VG5"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.63000"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Navi Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153362,
+            "scheme_name": "Navi Nifty Smallcap 250 Momentum quality index fund- Direct Plan",
+            "isin_growth": "INF959L01HQ6",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.64030"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "DSP Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153348,
+            "scheme_name": "DSP Nifty Private Bank Index Fund - Direct - Growth",
+            "isin_growth": "INF740KA1VN6",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "11.26430"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153353,
+            "scheme_name": "Kotak Nifty Commodities Index Fund-Direct Growth",
+            "isin_growth": "INF174KA1VE0",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.63100"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Franklin Templeton Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Low Duration Fund",
+            "scheme_code": 153371,
+            "scheme_name": "Franklin India Low Duration Fund-Growth",
+            "isin_growth": "INF090I01YB3",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.16940"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Franklin Templeton Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Low Duration Fund",
+            "scheme_code": 153368,
+            "scheme_name": "Franklin India Low Duration Fund-Direct-Growth",
+            "isin_growth": "INF090I01YE7",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.17880"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Unifi Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Hybrid Scheme - Dynamic Asset Allocation or Balanced Advantage",
+            "scheme_code": 153377,
+            "scheme_name": "Unifi Dynamic Asset Allocation Fund - Regular Growth",
+            "isin_growth": "INF1MIY01023",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.14020"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Unifi Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Hybrid Scheme - Dynamic Asset Allocation or Balanced Advantage",
+            "scheme_code": 153376,
+            "scheme_name": "Unifi Dynamic Asset Allocation Fund - Direct Growth",
+            "isin_growth": "INF1MIY01015",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.14820"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mirae Asset Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153384,
+            "scheme_name": "Mirae Asset BSE Select IPO ETF",
+            "isin_growth": "INF769K01ON4",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "44.06770"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153375,
+            "scheme_name": "Kotak CRISIL-IBX Financial Services 3-6 Months Debt Index Fund-Regular-Growth",
+            "isin_growth": "INF174KA1VN1",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.13700"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ICICI Prudential Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153378,
+            "scheme_name": "ICICI Prudential BSE Liquid Rate ETF - Growth",
+            "isin_growth": "INF109K1A021",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "01-05-2025",
+                "nav": "1008.24890"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mirae Asset Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153386,
+            "scheme_name": "Mirae Asset BSE Select IPO ETF Fund of Fund - Direct Plan - IDCW",
+            "isin_growth": "INF769K01OM6",
+            "isin_div_reinvestment": "INF769K01OL8"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.91300"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mirae Asset Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153382,
+            "scheme_name": "Mirae Asset BSE 200 Equal Weight ETF Fund of Fund - Regular Plan - Growth",
+            "isin_growth": "INF769K01OB9",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.64300"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ICICI Prudential Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153396,
+            "scheme_name": "ICICI Prudential Nifty EV & New Age Automotive ETF FOF - Growth",
+            "isin_growth": "INF109K1A096",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.30140"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mirae Asset Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153380,
+            "scheme_name": "Mirae Asset BSE 200 Equal Weight ETF Fund of Fund - Direct Plan - Growth",
+            "isin_growth": "INF769K01OE3",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.65100"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bandhan Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153390,
+            "scheme_name": "Bandhan CRISIL-IBX 10:90 Gilt Plus SDL Index - Dec 2029 Fund-Direct Plan-IDCW",
+            "isin_growth": "INF194KB1JM3",
+            "isin_div_reinvestment": "INF194KB1JN1"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.30300"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153374,
+            "scheme_name": "Kotak CRISIL-IBX Financial Services 3-6 Months Debt Index Fund-Regular-IDCW",
+            "isin_growth": "INF174KA1VO9",
+            "isin_div_reinvestment": "INF174KA1VP6"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.13700"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ICICI Prudential Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153395,
+            "scheme_name": "ICICI Prudential Nifty EV & New Age Automotive ETF FOF - Direct Plan - IDCW",
+            "isin_growth": "INF109K1A146",
+            "isin_div_reinvestment": "INF109K1A138"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.30320"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mirae Asset Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153388,
+            "scheme_name": "Mirae Asset BSE Select IPO ETF Fund of Fund - Regular Plan - IDCW",
+            "isin_growth": "INF769K01OJ2",
+            "isin_div_reinvestment": "INF769K01OI4"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.90500"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mirae Asset Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153379,
+            "scheme_name": "Mirae Asset BSE 200 Equal Weight ETF",
+            "isin_growth": "INF769K01OA1",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "12.29860"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bandhan Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153392,
+            "scheme_name": "Bandhan CRISIL-IBX 10:90 Gilt Plus SDL Index - Dec 2029 Fund-Regular Plan-IDCW",
+            "isin_growth": "INF194KB1JP6",
+            "isin_div_reinvestment": "INF194KB1JQ4"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.29940"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153399,
+            "scheme_name": "KOTAK NIFTY MIDCAP 150 INDEX FUND-REGULAR PLAN-GROWTH",
+            "isin_growth": "INF174KA1VT8",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.19300"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mirae Asset Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153381,
+            "scheme_name": "Mirae Asset BSE 200 Equal Weight ETF Fund of Fund - Direct Plan - IDCW",
+            "isin_growth": "INF769K01OG8",
+            "isin_div_reinvestment": "INF769K01OF0"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.65100"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ICICI Prudential Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153394,
+            "scheme_name": "ICICI Prudential Nifty EV & New Age Automotive ETF FOF - Direct Plan - Growth",
+            "isin_growth": "INF109K1A120",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.30320"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "HDFC Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153403,
+            "scheme_name": "HDFC NIFTY 1D RATE LIQUID ETF GROWTH",
+            "isin_growth": "INF179KC1JG3",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "01-05-2025",
+                "nav": "1009.16440"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153401,
+            "scheme_name": "KOTAK NIFTY MIDCAP 150 INDEX FUND-DIRECT PLAN-GROWTH",
+            "isin_growth": "INF174KA1VQ4",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.19900"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153402,
+            "scheme_name": "KOTAK NIFTY MIDCAP 150 INDEX FUND-DIRECT PLAN-IDCW-PAYOUT AND REINVESTMENT",
+            "isin_growth": "INF174KA1VR2",
+            "isin_div_reinvestment": "INF174KA1VS0"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.19800"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bandhan Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153391,
+            "scheme_name": "Bandhan CRISIL-IBX 10:90 Gilt Plus SDL Index - Dec 2029 Fund-Regular Plan-Growth",
+            "isin_growth": "INF194KB1JO9",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.29940"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153398,
+            "scheme_name": "Kotak Nifty Midcap 150 ETF",
+            "isin_growth": "INF174KA1VW2",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "20.07100"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bandhan Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153389,
+            "scheme_name": "Bandhan CRISIL-IBX 10:90 Gilt Plus SDL Index - Dec 2029 Fund-Direct Plan-Growth",
+            "isin_growth": "INF194KB1JL5",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.30300"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153400,
+            "scheme_name": "KOTAK NIFTY MIDCAP 150 INDEX FUND-REGULAR PLAN-IDCW PAYOUT AND REINVESTMENT",
+            "isin_growth": "INF174KA1VU6",
+            "isin_div_reinvestment": "INF174KA1VV4"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.19300"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "HDFC Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153404,
+            "scheme_name": "HDFC Nifty Top 20 Equal Weight Index Fund - Regular Growth",
+            "isin_growth": "INF179KC1JH1",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.19140"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mirae Asset Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153385,
+            "scheme_name": "Mirae Asset BSE Select IPO ETF Fund of Fund - Direct Plan - Growth",
+            "isin_growth": "INF769K01OK0",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.91300"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153373,
+            "scheme_name": "Kotak CRISIL-IBX Financial Services 3-6 Months Debt Index Fund-Direct-IDCW",
+            "isin_growth": "INF174KA1VL5",
+            "isin_div_reinvestment": "INF174KA1VM3"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.14080"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Kotak Mahindra Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153372,
+            "scheme_name": "Kotak CRISIL-IBX Financial Services 3-6 Months Debt Index Fund-Direct-Growth",
+            "isin_growth": "INF174KA1VK7",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.14050"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Franklin Templeton Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Low Duration Fund",
+            "scheme_code": 153370,
+            "scheme_name": "Franklin India Low Duration Fund-IDCW",
+            "isin_growth": "INF090I01YD9",
+            "isin_div_reinvestment": "INF090I01YC1"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.16940"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Franklin Templeton Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Low Duration Fund",
+            "scheme_code": 153369,
+            "scheme_name": "Franklin India Low Duration Fund-Direct-IDCW",
+            "isin_growth": "INF090I01YG2",
+            "isin_div_reinvestment": "INF090I01YF4"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.17880"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Motilal Oswal Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153367,
+            "scheme_name": "Motilal Oswal Active Momentum Fund- Direct-IDCW",
+            "isin_growth": "INF247L01EQ3",
+            "isin_div_reinvestment": "INF247L01ER1"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "9.86680"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Motilal Oswal Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153406,
+            "scheme_name": "Motilal Oswal Nifty Capital Market ETF",
+            "isin_growth": "INF247L01EV3",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "37.34880"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "HDFC Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153405,
+            "scheme_name": "HDFC Nifty Top 20 Equal Weight Index Fund - Direct",
+            "isin_growth": "INF179KC1JI9",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.19650"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Motilal Oswal Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153366,
+            "scheme_name": "Motilal Oswal Active Momentum Fund - Regular- IDCW",
+            "isin_growth": "INF247L01ET7",
+            "isin_div_reinvestment": "INF247L01EU5"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "9.86560"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bandhan Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153408,
+            "scheme_name": "Bandhan CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Regular Plan - Growth",
+            "isin_growth": "INF194KB1JS0",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.12690"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bandhan Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153407,
+            "scheme_name": "Bandhan CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Direct Plan - Growth",
+            "isin_growth": "INF194KB1JR2",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.13050"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ICICI Prudential Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153393,
+            "scheme_name": "ICICI Prudential Nifty EV & New Age Automotive ETF FOF - IDCW",
+            "isin_growth": "INF109K1A112",
+            "isin_div_reinvestment": "INF109K1A104"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.30140"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Motilal Oswal Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153365,
+            "scheme_name": "Motilal Oswal Active Momentum Fund- Regular- Growth",
+            "isin_growth": "INF247L01ES9",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "9.86560"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mirae Asset Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153387,
+            "scheme_name": "Mirae Asset BSE Select IPO ETF Fund of Fund - Regular Plan - Growth",
+            "isin_growth": "INF769K01OH6",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.92300"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Motilal Oswal Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153364,
+            "scheme_name": "Motilal Oswal Active Momentum Fund- Direct-Growth",
+            "isin_growth": "INF247L01EP5",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "9.86680"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ICICI Prudential Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153397,
+            "scheme_name": "ICICI Prudential Nifty EV & New Age Automotive ETF",
+            "isin_growth": "INF109K1A153",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "27.20500"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Mirae Asset Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153383,
+            "scheme_name": "Mirae Asset BSE 200 Equal Weight ETF Fund of Fund - Regular Plan - IDCW",
+            "isin_growth": "INF769K01OD5",
+            "isin_div_reinvestment": "INF769K01OC7"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.64300"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ICICI Prudential Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153409,
+            "scheme_name": "ICICI Prudential CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Growth",
+            "isin_growth": "INF109K1A039",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.10980"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ICICI Prudential Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153412,
+            "scheme_name": "ICICI Prudential CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Annual IDCW",
+            "isin_growth": "INF109K1A054",
+            "isin_div_reinvestment": "INF109K1A047"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.10980"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Edelweiss Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Low Duration Fund",
+            "scheme_code": 153418,
+            "scheme_name": "Edelweiss Low Duration Fund - Direct Plan IDCW Payout",
+            "isin_growth": "INF754K01UQ6",
+            "isin_div_reinvestment": "INF754K01UR4"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "1013.89390"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Tata Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153420,
+            "scheme_name": "Tata BSE Quality Index Fund Direct plan Growth Option",
+            "isin_growth": "INF277KA1DK1",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.46880"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Edelweiss Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Low Duration Fund",
+            "scheme_code": 153417,
+            "scheme_name": "Edelweiss Low Duration Fund - Regular Plan IDCW Payout",
+            "isin_growth": "INF754K01UU8",
+            "isin_div_reinvestment": "INF754K01UV6"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "1012.90540"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Tata Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153423,
+            "scheme_name": "Tata BSE Quality Index Fund Regular plan IDCW Reinvestment Option",
+            "isin_growth": null,
+            "isin_div_reinvestment": "INF277KA1DI5"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.46190"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Edelweiss Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Low Duration Fund",
+            "scheme_code": 153419,
+            "scheme_name": "Edelweiss Low Duration Fund - Regular Plan Growth",
+            "isin_growth": "INF754K01UT0",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "1012.90480"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Zerodha Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153415,
+            "scheme_name": "360 ONE Silver ETF",
+            "isin_growth": "INF579M01BC3",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "94.13500"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ICICI Prudential Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153410,
+            "scheme_name": "ICICI Prudential CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Direct Plan - Annual IDCW",
+            "isin_growth": "INF109K1A070",
+            "isin_div_reinvestment": "INF109K1A088"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.11270"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "ICICI Prudential Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153411,
+            "scheme_name": "ICICI Prudential CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Direct Plan - Growth",
+            "isin_growth": "INF109K1A062",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.11270"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Tata Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153421,
+            "scheme_name": "Tata BSE Quality Index Fund Direct plan IDCW Payout Option",
+            "isin_growth": "INF277KA1DO3",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.46880"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Edelweiss Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Low Duration Fund",
+            "scheme_code": 153416,
+            "scheme_name": "Edelweiss Low Duration Fund - Direct Plan Growth",
+            "isin_growth": "INF754K01UP8",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "1013.89650"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Axis Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153414,
+            "scheme_name": "Axis Nifty500 Value 50 ETF",
+            "isin_growth": "INF846KA1119",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "27.06960"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Zerodha Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153413,
+            "scheme_name": "Zerodha Silver ETF",
+            "isin_growth": "INF0R8F01091",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "9.70030"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Tata Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153422,
+            "scheme_name": "Tata BSE Quality Index Fund Direct plan IDCW Reinvestment Option",
+            "isin_growth": null,
+            "isin_div_reinvestment": "INF277KA1DP0"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.46880"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "quant Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Hybrid Scheme - Arbitrage Fund",
+            "scheme_code": 153427,
+            "scheme_name": "quant Arbitrage Fund - IDCW Option - Direct Plan",
+            "isin_growth": "INF966L01DX6",
+            "isin_div_reinvestment": "INF966L01DY4"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.06330"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Tata Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153424,
+            "scheme_name": "Tata BSE Quality Index Fund Regular plan IDCW Payout Option",
+            "isin_growth": "INF277KA1DJ3",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.46190"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153431,
+            "scheme_name": "SBI BSE PSU BANK INDEX FUND- Regular Plan- Income Distribution Cum Capital Withdrawal Option (IDCW)",
+            "isin_growth": "INF200KB1662",
+            "isin_div_reinvestment": "INF200KB1670"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.52160"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Tata Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153425,
+            "scheme_name": "Tata BSE Quality Index Fund Regular plan Growth Option",
+            "isin_growth": "INF277KA1DH7",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.46190"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "quant Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Hybrid Scheme - Arbitrage Fund",
+            "scheme_code": 153429,
+            "scheme_name": "quant Arbitrage Fund - IDCW Option - Regular Plan",
+            "isin_growth": "INF966L01EA2",
+            "isin_div_reinvestment": "INF966L01EB0"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.05970"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "quant Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Hybrid Scheme - Arbitrage Fund",
+            "scheme_code": 153426,
+            "scheme_name": "quant Arbitrage Fund - Growth Option - Direct Plan",
+            "isin_growth": "INF966L01DW8",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.06320"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "quant Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Hybrid Scheme - Arbitrage Fund",
+            "scheme_code": 153428,
+            "scheme_name": "quant Arbitrage Fund - Growth Option - Regular Plan",
+            "isin_growth": "INF966L01DZ1",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.05940"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153433,
+            "scheme_name": "SBI BSE PSU BANK INDEX FUND- Direct Plan- Income Distribution Cum Capital Withdrawal Option (IDCW)",
+            "isin_growth": "INF200KB1704",
+            "isin_div_reinvestment": "INF200KB1696"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.52700"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153435,
+            "scheme_name": "SBI BSE PSU BANK ETF",
+            "isin_growth": "INF200KB1712",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "37.80700"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153434,
+            "scheme_name": "SBI BSE PSU BANK INDEX FUND- Regular Plan- Growth",
+            "isin_growth": "INF200KB1654",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.52130"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bajaj Finserv Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Overnight Fund",
+            "scheme_code": 153438,
+            "scheme_name": "Bajaj Finserv Overnight Fund - Direct - Unclaimed less than 3 years Redemption Plan",
+            "isin_growth": "INF0QA701AF0",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "01-05-2025",
+                "nav": "1005.63640"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Bajaj Finserv Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Overnight Fund",
+            "scheme_code": 153437,
+            "scheme_name": "Bajaj Finserv Overnight Fund - Direct - Unclaimed less than 3 years IDCW Plan",
+            "isin_growth": "INF0QA701AE3",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "01-05-2025",
+                "nav": "1001.63790"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "SBI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153432,
+            "scheme_name": "SBI BSE PSU BANK INDEX FUND- Direct Plan- Growth",
+            "isin_growth": "INF200KB1688",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.52680"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Zerodha Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Debt Scheme - Overnight Fund",
+            "scheme_code": 153436,
+            "scheme_name": "Zerodha Overnight Fund - Direct Plan - Growth Option",
+            "isin_growth": "INF0R8F01075",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "01-05-2025",
+                "nav": "10.05540"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "UTI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153441,
+            "scheme_name": "UTI Income Plus Arbitrage Active Fund of Fund - Regular Plan - Growth Option",
+            "isin_growth": "INF789F1AB63",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.08490"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Aditya Birla Sun Life Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153444,
+            "scheme_name": "Aditya Birla Sun Life Crisil-IBX Financial Services 9-12 Months Debt Index Fund-Direct IDCW Payout",
+            "isin_growth": "INF209KC1506",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.13090"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "UTI Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153442,
+            "scheme_name": "UTI Income Plus Arbitrage Active Fund of Fund - Direct Plan - Growth Option",
+            "isin_growth": "INF789F1AB55",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.08820"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Groww Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153453,
+            "scheme_name": "Groww Nifty 500 Momentum 50 ETF FOF - Direct Plan - Growth",
+            "isin_growth": "INF666M01JX7",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "9.77120"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Angel One Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153451,
+            "scheme_name": "ANGEL ONE NIFTY 1D RATE LIQUID ETF - GROWTH",
+            "isin_growth": "INF1J2R01056",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "02-05-2025",
+                "nav": "1006.12450"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Groww Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153455,
+            "scheme_name": "Groww Nifty 500 Momentum 50 ETF FOF - Regular Plan - IDCW",
+            "isin_growth": "INF666M01KH8",
+            "isin_div_reinvestment": "INF666M01KI6"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "9.77040"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Aditya Birla Sun Life Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153445,
+            "scheme_name": "Aditya Birla Sun Life Crisil-IBX Financial Services 9-12 Months Debt Index Fund-Regular Growth",
+            "isin_growth": "INF209KC1514",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.12830"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Groww Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153456,
+            "scheme_name": "Groww Nifty 500 Momentum 50 ETF FOF - Regular Plan- Growth",
+            "isin_growth": "INF666M01KC9",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "9.77040"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Aditya Birla Sun Life Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - Index Funds",
+            "scheme_code": 153443,
+            "scheme_name": "Aditya Birla Sun Life Crisil-IBX Financial Services 9-12 Months Debt Index Fund-Direct Growth",
+            "isin_growth": "INF209KC1498",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.13050"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Groww Mutual Fund",
+            "scheme_type": "360 ONE Mutual Fund",
+            "scheme_category": "Formerly Known as IIFL Mutual Fund",
+            "scheme_code": 153452,
+            "scheme_name": "Groww Nifty 500 Momentum 50 ETF",
+            "isin_growth": "INF666M01KJ4",
+            "isin_div_reinvestment": null
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "10.00950"
+            }
+        ],
+        "status": "SUCCESS"
+    },
+    {
+        "meta": {
+            "fund_house": "Groww Mutual Fund",
+            "scheme_type": "Open Ended Schemes",
+            "scheme_category": "Other Scheme - FoF Domestic",
+            "scheme_code": 153454,
+            "scheme_name": "Groww Nifty 500 Momentum 50 ETF FOF - Direct Plan - IDCW",
+            "isin_growth": "INF666M01JY5",
+            "isin_div_reinvestment": "INF666M01KB1"
+        },
+        "data": [
+            {
+                "date": "30-04-2025",
+                "nav": "9.77120"
+            }
+        ],
+        "status": "SUCCESS"
+    }
+]
