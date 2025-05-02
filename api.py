@@ -16,6 +16,12 @@ import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
+from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification
+import torch
+import logging # Import logging
+
+# Configure basic logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Ensure the current directory is in the Python path
 current_dir = Path(__file__).parent
@@ -29,9 +35,9 @@ except ImportError:
     try:
         from test import fetch_latest_data, main as fetch_mutual_funds
     except ImportError as e:
-        print(f"Error importing from test.py: {e}")
-        print(f"Current directory: {current_dir}")
-        print(f"Python path: {sys.path}")
+        logging.error(f"Error importing from test.py: {e}")
+        logging.error(f"Current directory: {current_dir}")
+        logging.error(f"Python path: {sys.path}")
         raise
 
 app = FastAPI(
@@ -60,9 +66,26 @@ class BudgetResponse(BaseModel):
     stocks: list
     recommendations: str
 
+# Removed duplicate TopRecommendationsResponse definition here
+
+class StockSentiment(BaseModel):
+    label: Optional[str] = None
+    score: Optional[float] = None
+    news_title: Optional[str] = None # Include the title analyzed
+    error: Optional[str] = None # To capture errors during sentiment analysis
+
+class StockDataWithSentiment(BaseModel):
+    # Adjusting based on observed error: expecting 'symbol' from input data
+    symbol: str # Changed from ticker
+    name: Optional[str] = None
+    price: Optional[float] = None
+    # Add other relevant fields if they exist in the original 'stocks' list items
+    sentiment: Optional[StockSentiment] = None
+
+# Corrected TopRecommendationsResponse definition
 class TopRecommendationsResponse(BaseModel):
     recommendations: str
-    stocks: list
+    stocks: List[StockDataWithSentiment] # Update to use the new model
 
 class StockInfo(BaseModel):
     current_price: Optional[float] = None
@@ -78,22 +101,36 @@ class PredictionData(BaseModel):
     predicted_next_day_close: Optional[float] = None
 
 class PredictionResponse(BaseModel):
-    ticker: str
+    ticker: str # Keep as ticker here as yfinance uses ticker for prediction input
     info: Optional[StockInfo] = None
     prediction: Optional[PredictionData] = None
     error: Optional[str] = None
 
 stock_db = StockDatabase()
 
+# --- Load FinBERT Model Globally ---
+# Determine device
+device = 0 if torch.cuda.is_available() else -1
+logging.info(f"Attempting to load FinBERT on device: {'GPU' if device == 0 else 'CPU'}")
+try:
+    finbert_tokenizer = AutoTokenizer.from_pretrained("ProsusAI/finbert")
+    finbert_model = AutoModelForSequenceClassification.from_pretrained("ProsusAI/finbert")
+    sentiment_pipeline = pipeline("sentiment-analysis", model=finbert_model, tokenizer=finbert_tokenizer, device=device)
+    logging.info("FinBERT sentiment analysis pipeline loaded successfully.")
+except Exception as e:
+    logging.error(f"Error loading FinBERT model: {e}. Sentiment analysis will be unavailable.")
+    sentiment_pipeline = None
+# --- End Model Loading ---
+
 @app.post("/analyze-stocks", response_model=BudgetResponse)
 async def analyze_stocks(request: BudgetRequest):
     try:
         # Refresh stock data first to ensure fresh stock prices
         stock_db.refresh_all_stocks()
-        
+
         # Convert budget to USD first
         budget_usd = inr_to_usd(request.budget_inr)
-        
+
         # Quick validation
         if budget_usd < 1:
             return {
@@ -102,29 +139,30 @@ async def analyze_stocks(request: BudgetRequest):
                 "stocks": [],
                 "recommendations": f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})"
             }
-        
+
         # Get freshly updated stocks within budget
         stocks_in_budget = stock_db.get_stocks_in_budget(budget_usd)
-        
+
         # Format results
         analysis_result = {
             "budget_inr": request.budget_inr,
             "budget_usd": budget_usd,
             "stocks": stocks_in_budget
         }
-        
+
         # Get detailed recommendations only if we have stocks
         if stocks_in_budget:
             recommendations = get_top_stock_recommendations(stocks_in_budget)
         else:
             recommendations = f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})"
-        
+
         return {
             **analysis_result,
             "recommendations": recommendations
         }
-        
+
     except Exception as e:
+        logging.error(f"Error in /analyze-stocks: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.options("/analyze-stocks")
@@ -136,36 +174,95 @@ async def get_top_recommendations(request: BudgetRequest):
     try:
         # Don't refresh stocks here since analyze-stocks already does it
         # and both endpoints are called together on the same page
-        
+
         # Convert budget to USD first
         budget_usd = inr_to_usd(request.budget_inr)
-        
+
         # Quick validation
         if budget_usd < 1:
-            return {
-                "recommendations": f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})",
-                "stocks": []
-            }
-        
+            return TopRecommendationsResponse(
+                recommendations=f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})",
+                stocks=[]
+            )
+
         # Get stocks within budget using the current cache
         stocks_in_budget = stock_db.get_stocks_in_budget(budget_usd)
-        
+
         if not stocks_in_budget:
-            return {
-                "recommendations": f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})",
-                "stocks": []
-            }
-        
-        # Get top 5 recommendations based on the same data as analyze-stocks
-        recommendations = get_top_stock_recommendations(stocks_in_budget, top_n=5)
-        
-        return {
-            "recommendations": recommendations,
-            "stocks": stocks_in_budget[:5]  # Include full stock data for top 5
-        }
-        
+             return TopRecommendationsResponse(
+                recommendations=f"No stocks found within budget: ₹{request.budget_inr:,.2f} (${budget_usd:,.2f})",
+                stocks=[]
+            )
+
+        # Get top 5 recommended stock dictionaries (expecting 'symbol')
+        top_stocks_data = stocks_in_budget[:5]
+        recommendations_text = get_top_stock_recommendations(stocks_in_budget, top_n=5) # Get the text summary
+
+        # Add sentiment analysis
+        stocks_with_sentiment = []
+        if sentiment_pipeline: # Only proceed if the pipeline loaded correctly
+            for stock_data in top_stocks_data:
+                # Use 'symbol' based on the validation error feedback
+                ticker_symbol = stock_data.get('symbol')
+                sentiment_result = StockSentiment() # Initialize sentiment object
+                news_title_analyzed = None
+
+                # Prepare data for Pydantic model, ensuring 'symbol' is present
+                stock_data_for_pydantic = stock_data.copy()
+
+                if ticker_symbol:
+                    try:
+                        logging.info(f"--- Processing Ticker: {ticker_symbol} ---")
+                        logging.info(f"Fetching news for {ticker_symbol}...")
+                        stock_obj = yf.Ticker(ticker_symbol)
+                        news = stock_obj.news
+                        if news and len(news) > 0:
+                            first_news = news[0]
+                            # Correctly access title nested within 'content'
+                            news_title_analyzed = first_news.get('content', {}).get('title')
+                            if news_title_analyzed:
+                                logging.info(f"Analyzing title: '{news_title_analyzed}'")
+                                analysis = sentiment_pipeline(news_title_analyzed)
+                                if analysis and len(analysis) > 0:
+                                    sentiment_result.label = analysis[0].get('label')
+                                    sentiment_result.score = analysis[0].get('score')
+                                    logging.info(f"Sentiment for {ticker_symbol}: Label={sentiment_result.label}, Score={sentiment_result.score:.4f}")
+                                else:
+                                     sentiment_result.error = "Sentiment analysis returned empty result."
+                                     logging.warning(f"Sentiment analysis returned empty result for {ticker_symbol}")
+                            else:
+                                sentiment_result.error = "First news item has no title."
+                                logging.warning(f"First news item has no title for {ticker_symbol}")
+                        else:
+                            sentiment_result.error = "No news found for ticker."
+                            logging.info(f"No news found for ticker {ticker_symbol}")
+                    except Exception as news_err:
+                        logging.error(f"Error fetching or analyzing news for {ticker_symbol}: {news_err}", exc_info=True)
+                        sentiment_result.error = f"Error processing news: {str(news_err)}"
+                else:
+                    sentiment_result.error = "Symbol missing in stock data."
+                    logging.warning("Symbol missing in stock data item.")
+
+                sentiment_result.news_title = news_title_analyzed # Store the title that was analyzed
+
+                # Create the final stock data object including sentiment
+                # Ensure the input dict matches the Pydantic model (uses 'symbol')
+                stock_data_final = StockDataWithSentiment(**stock_data_for_pydantic, sentiment=sentiment_result)
+                stocks_with_sentiment.append(stock_data_final)
+        else:
+             # If pipeline failed to load, return stock data without sentiment
+             logging.warning("Sentiment pipeline not available. Skipping sentiment analysis.")
+             stocks_with_sentiment = [StockDataWithSentiment(**stock_data, sentiment=StockSentiment(error="Sentiment model not loaded")) for stock_data in top_stocks_data]
+
+        return TopRecommendationsResponse(
+            recommendations=recommendations_text,
+            stocks=stocks_with_sentiment
+        )
+
     except Exception as e:
+        logging.error(f"Error in /top-recommendations: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
+
 
 @app.options("/top-recommendations")
 async def top_recommendations_options():
@@ -177,25 +274,26 @@ async def initialize_stocks():
     try:
         # Initialize stock cache
         stock_db.refresh_all_stocks()
-        
+
         # Fetch mutual funds data
         results = fetch_mutual_funds()
-        
+
         return {
             "message": "Stock data and mutual funds initialized successfully",
             "stocks_updated": True,
             "mutual_funds_updated": bool(results)
         }
     except Exception as e:
+        logging.error(f"Error initializing data: {e}", exc_info=True)
         raise HTTPException(
-            status_code=500, 
+            status_code=500,
             detail=f"Error initializing data: {str(e)}"
         )
 
 @app.on_event("startup")
 async def startup_event():
     """Minimal startup event that just prints ready message"""
-    print("API is ready to serve requests")
+    logging.info("API is ready to serve requests")
 
 @app.post("/refresh-stocks")
 async def refresh_stocks():
@@ -204,6 +302,7 @@ async def refresh_stocks():
         stock_db.refresh_all_stocks()
         return {"message": "Stock cache refreshed successfully"}
     except Exception as e:
+        logging.error(f"Error refreshing stock cache: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/mutual-funds")
@@ -213,10 +312,15 @@ async def get_mutual_funds():
         results = fetch_mutual_funds()
         if not results:
             # If no fresh data, try reading from file as fallback
-            with open("filtered_schemes_2025.json", "r") as f:
-                results = json.load(f)
+            try:
+                with open("filtered_schemes_2025.json", "r") as f:
+                    results = json.load(f)
+            except FileNotFoundError:
+                 logging.warning("Mutual funds file not found, returning empty list.")
+                 results = []
         return results
     except Exception as e:
+        logging.error(f"Error fetching mutual funds: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/mutual-fund/{scheme_code}")
@@ -228,6 +332,7 @@ async def get_mutual_fund(scheme_code: str):
             raise HTTPException(status_code=404, detail="No data found for scheme")
         return data
     except Exception as e:
+        logging.error(f"Error fetching mutual fund {scheme_code}: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/")
@@ -292,14 +397,15 @@ async def predict_stock(ticker: str):
 
     except requests.exceptions.RequestException as e:
          # Handle potential yfinance network errors
+        logging.error(f"Network error fetching data for {ticker}: {e}", exc_info=True)
         return PredictionResponse(ticker=ticker, error=f"Network error fetching data for {ticker}: {e}")
     except HTTPException as e:
         # Re-raise HTTP exceptions from checks (like 404 or 400)
         raise e
     except Exception as e:
         # Catch other potential errors during processing
+        logging.error(f"An error occurred processing {ticker}: {str(e)}", exc_info=True)
         return PredictionResponse(ticker=ticker, error=f"An error occurred processing {ticker}: {str(e)}")
-
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
