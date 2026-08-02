@@ -7,7 +7,7 @@ from typing import Dict, Optional
 
 class MutualFundAnalyzer:
     def __init__(self):
-        API_KEY = "***REMOVED***"
+        API_KEY = os.environ.get("PPLX_API_KEY", "")
         self.api = PerplexityAPI(API_KEY)
 
     def analyze_mutual_fund(self, query: str, context: Optional[str] = None) -> Dict:

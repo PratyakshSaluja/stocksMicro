@@ -28,7 +28,7 @@ except ImportError:
 API_KEY = os.environ.get("PPLX_API_KEY") 
 if not API_KEY:
     # Fallback if environment variable is not set, use the one from the codebase for consistency in this test
-    API_KEY = "***REMOVED***" 
+    API_KEY = os.environ.get("PPLX_API_KEY", "") 
     print("Warning: PPLX_API_KEY environment variable not found. Using hardcoded key for testing.")
 
 

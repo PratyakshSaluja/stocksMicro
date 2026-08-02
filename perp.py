@@ -117,8 +117,8 @@ class PerplexityAPI:
         return re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
 
 if __name__ == "__main__":
-    API_KEY = os.environ.get("PPLX_API_KEY", "***REMOVED***") 
-    if API_KEY == "***REMOVED***" and not os.environ.get("PPLX_API_KEY"):
+    API_KEY = os.environ.get("PPLX_API_KEY", "") 
+    if not API_KEY:
         logging.warning("Using a hardcoded API key for testing. Set PPLX_API_KEY environment variable for production.")
         
     perplexity_api = PerplexityAPI(API_KEY)
